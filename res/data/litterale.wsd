@@ -1,0 +1,86 @@
+@startuml Litterale
+
+abstract class Litterale {
+
+    + ~Litterale() {virtual}
+
+    + affichage(): const QString const = 0
+    + isNull(): bool const = 0
+}
+
+abstract class LitteraleNombre {
+    # typeLitterale: TypeLitterale
+    ' + TypeLitterale: enum olass
+
+    + isPos(): bool const = 0
+    + getType() const: TypeLitterale
+    + cloneOnHeap(): LitteraleNombre* const = 0
+    + simplifier(): LitteraleNombre* = 0
+    ' + convertToComplexe(): LitteraleNombre* = 0
+}
+
+abstract class LitteraleNumerique {
+    + convertToNumerique(TypeLitterale: type): LitteraleNumerique& = 0
+
+    + operator+(l: LiteraleNumerique&): LitteraleNumerique* {virtual}
+    + operator-(l: LiteraleNumerique&): LitteraleNumerique* {virtual}
+    + operator*(l: LiteraleNumerique&): LitteraleNumerique* {virtual}
+    + operator/(l: LiteraleNumerique&): LitteraleNumerique* {virtual}
+    + calculation(l: LitteraleNumerique&): void
+    ' + convertToComplexe(): LitteraleNumerique* = 0
+}
+
+' class LitteraleComplexe {
+'     - partRe_: LitteraleNumerique*
+'     - partIm_: LitteraleNumerique*
+
+'     + LitteraleComplexe(re: LitteraleNumerique*, img:LitteraleNumerique*)
+'     + LitteraleComplexe(l: const LitteraleComplexe&)
+
+'     + getPartRe(): const LitteraleNumerique& const
+'     + getPartIm(): const LitteraleNumerique& const
+'     ' + convertToComplexe(): LitteraleComplexe*
+' }
+
+class LitteraleEntiere {
+    - valeur_: int
+
+    +LitteraleEntiere(valeur)
+}
+
+class LitteraleReelle {
+    - entier_: int
+    - decimal_: double
+    - valeur_: double
+
+    + LitteraleReelle(decimal: double)
+    + LitteraleReelle(entier: int, decimal: double)
+
+    + getEntier(): int const
+    + getDecimal(): double const
+    + getValeur(): double const
+}
+
+class LitteraleRationnelle {
+    - num_: int
+    - den_: int
+
+    + LitteraleRationnelle(num: int, den: int)
+
+    + getNum(): int const
+    + getDen(): int const
+}
+
+
+' skinparam groupInheritance 2
+
+Litterale <|-- LitteraleNombre
+
+LitteraleNombre <|-- LitteraleNumerique
+' LitteraleNombre <|-- LitteraleComplexe
+
+LitteraleNumerique <|-- LitteraleEntiere
+LitteraleNumerique <|-- LitteraleRationnelle
+LitteraleNumerique <|-- LitteraleReelle
+
+@enduml
