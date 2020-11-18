@@ -12,7 +12,7 @@ class Litterale
 public:
     virtual ~Litterale() {}
 
-    virtual const QString affichage() const = 0;
+    virtual const QString affichage(QString f = "") const = 0;
     virtual bool isNull() const = 0;
 };
 
@@ -24,6 +24,7 @@ enum class TypeLitterale
     COMPLEXE,
 };
 
+class LitteraleNumerique;
 /*
 ** LitteraleNombre classe
 */
@@ -35,13 +36,17 @@ public:
     virtual TypeLitterale getType() const { return typeLitterale_; }
     virtual LitteraleNombre *cloneOnHeap() const = 0;
     virtual LitteraleNombre *simplifier() = 0;
-    // virtual LitteraleNombre *convertToComplexe() = 0;
-    // virtual LitteraleNombre *operator+(LitteraleNombre &l) = 0;
+    virtual LitteraleNombre *operator+(LitteraleNombre &l) = 0;
+    virtual LitteraleNombre *operator-(LitteraleNombre &l) = 0;
+    virtual LitteraleNombre *operator*(LitteraleNombre &l) = 0;
+    virtual LitteraleNombre *operator/(LitteraleNombre &l) = 0;
+    virtual LitteraleNombre *convertToComplexe() = 0;
 
 protected:
     TypeLitterale typeLitterale_;
 };
 
+#include "litterale_complexe.h"
 /*
 ** LitteraleNumerique classe compose LitteraleEntiere, LitteraleRationnelle, LitteraleReelle
 */
@@ -52,25 +57,57 @@ class LitteraleNumerique : public LitteraleNombre
 
 public:
     // typedef LitteraleNumerique* (*fonc_t)(LitteraleNumerique&, LitteraleNumerique&);
-    virtual LitteraleNumerique *operator+(LitteraleNumerique &l)
+    virtual LitteraleNombre *operator+(LitteraleNombre &l)
     {
-        calculation(l);
-        return *a + *b;
+        if (l.getType() != TypeLitterale::COMPLEXE)
+        {
+            LitteraleNumerique &l_cast = dynamic_cast<LitteraleNumerique &>(l);
+            calculation(l_cast);
+            return *a + *b;
+        }
+        else
+        {
+            return l + *this;
+        }
     }
-    virtual LitteraleNumerique *operator-(LitteraleNumerique &l)
+    virtual LitteraleNombre *operator-(LitteraleNombre &l)
     {
-        calculation(l);
-        return *a - *b;
+        if (l.getType() != TypeLitterale::COMPLEXE)
+        {
+            LitteraleNumerique &l_cast = dynamic_cast<LitteraleNumerique &>(l);
+            calculation(l_cast);
+            return *a - *b;
+        }
+        else
+        {
+            return l - *this;
+        }
     }
-    virtual LitteraleNumerique *operator*(LitteraleNumerique &l)
+    virtual LitteraleNombre *operator*(LitteraleNombre &l)
     {
-        calculation(l);
-        return *a * *b;
+        if (l.getType() != TypeLitterale::COMPLEXE)
+        {
+            LitteraleNumerique &l_cast = dynamic_cast<LitteraleNumerique &>(l);
+            calculation(l_cast);
+            return *a * *b;
+        }
+        else
+        {
+            return l * *this;
+        }
     }
-    virtual LitteraleNumerique *operator/(LitteraleNumerique &l)
+    virtual LitteraleNombre *operator/(LitteraleNombre &l)
     {
-        calculation(l);
-        return *a / *b;
+        if (l.getType() != TypeLitterale::COMPLEXE)
+        {
+            LitteraleNumerique &l_cast = dynamic_cast<LitteraleNumerique &>(l);
+            calculation(l_cast);
+            return *a / *b;
+        }
+        else
+        {
+            return l / *this;
+        }
     }
 
     void calculation(LitteraleNumerique &l)
@@ -85,7 +122,7 @@ public:
     virtual LitteraleNumerique *convertToNumerique(TypeLitterale type) = 0;
     // virtual double getValeur() const = 0;
     virtual LitteraleNumerique *simplifier() = 0;
-    // virtual const LitteraleComplexe *convertToComplexe() const = 0;
+    // virtual LitteraleNombre *convertToComplexe():
 };
 
 #endif // __LITTERALE_H__

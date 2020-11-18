@@ -1,31 +1,32 @@
-// #ifndef __LITTERALE_COMPLEXE_H__
-// #define __LITTERALE_COMPLEXE_H__
+#ifndef __LITTERALE_COMPLEXE_H__
+#define __LITTERALE_COMPLEXE_H__
 
-// #include "litterale.h"
+#include "litterale.h"
 
-// class LitteraleComplexe : public LitteraleNombre
-// {
-// private:
-//     LitteraleNumerique* partRe_;
-//     LitteraleNumerique* partIm_;
+class LitteraleComplexe : public LitteraleNombre
+{
+private:
+    LitteraleNombre* partRe_;
+    LitteraleNombre* partIm_;
 
-// public:
-//     LitteraleComplexe(LitteraleNumerique *re, LitteraleNumerique *im);
-//     const LitteraleNumerique &getPartRe() const { return *partRe_; }
-//     const LitteraleNumerique &getPartIm() const { return *partIm_; }
+public:
+    LitteraleComplexe(LitteraleNombre *re, LitteraleNombre *im);
 
-//     bool isPos() const { return partRe_->isPos() && partIm_->isPos(); }
-//     bool isNull() const override { return partRe_->isNull() && partIm_->isNull(); }
+    const LitteraleNombre &getPartRe() const { return *partRe_; }
+    const LitteraleNombre &getPartIm() const { return *partIm_; }
 
-//     const QString affichage() const override;
-//     LitteraleComplexe *simplifier() override;
-//     LitteraleNombre *cloneOnHeap() const override;
-//     LitteraleNombre *convertToComplexe() override { return this; }
+    bool isPos() const { return partRe_->isPos() && partIm_->isPos(); }
+    bool isNull() const override { return partRe_->isNull() && partIm_->isNull(); }
 
-//     LitteraleNombre *operator+(LitteraleNombre &l);
-//     LitteraleNombre *operator-(LitteraleNombre &l);
-//     LitteraleNombre *operator*(LitteraleNombre &l);
-//     LitteraleNombre *operator/(LitteraleNombre &l);
-// };
+    const QString affichage(QString f) const override;
+    LitteraleComplexe *simplifier() override;
+    LitteraleNombre *cloneOnHeap() const override;
+    LitteraleNombre *convertToComplexe() override { return cloneOnHeap(); }
 
-// #endif // __LITTERALE_COMPLEXE_H__
+    LitteraleNombre *operator+(LitteraleNombre &l);
+    LitteraleNombre *operator-(LitteraleNombre &l);
+    LitteraleNombre *operator*(LitteraleNombre &l);
+    LitteraleNombre *operator/(LitteraleNombre &l);
+};
+
+#endif // __LITTERALE_COMPLEXE_H__

@@ -15,7 +15,7 @@ public:
     int getNum() const { return num_; }
     int getDen() const { return den_; }
 
-    const QString affichage() const override;
+    const QString affichage(QString f) const override;
     bool isNull() const override { return num_ != 0; }
     bool isPos() const override { return num_ * den_ > 0; }
     LitteraleNumerique *cloneOnHeap() const override;
@@ -23,11 +23,11 @@ public:
     // double getValeur() const { return double(num_) / den_; }
 
     virtual LitteraleNumerique *convertToNumerique(TypeLitterale type) override;
-    // virtual LitteraleNombre *convertToComplexe() override;
+    virtual LitteraleNombre *convertToComplexe() override;
 
-    LitteraleNumerique *operator+(LitteraleNumerique &l) override;
-    LitteraleNumerique *operator-(LitteraleNumerique &l) override;
-    LitteraleNumerique *operator*(LitteraleNumerique &l)override;
-    LitteraleNumerique *operator/(LitteraleNumerique &l) override;
+    LitteraleNombre *operator+(LitteraleNombre &l) override;
+    LitteraleNombre *operator-(LitteraleNombre &l) override;
+    LitteraleNombre *operator*(LitteraleNombre &l)override;
+    LitteraleNombre *operator/(LitteraleNombre &l) override;
 };
 #endif // __LITTERALE_RATIONNELLE_H__

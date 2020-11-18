@@ -24,9 +24,9 @@ LitteraleRationnelle::LitteraleRationnelle(int num, int den)
     typeLitterale_ = TypeLitterale::RATIONNEL;
 }
 
-const QString LitteraleRationnelle::affichage() const
+const QString LitteraleRationnelle::affichage(QString f) const
 {
-    return QString::number(num_) + QString{"/"} + QString::number(den_);
+return    f.append(QString::number(num_) + QString{"/"} + QString::number(den_));
 }
 LitteraleNumerique *LitteraleRationnelle::cloneOnHeap() const
 {
@@ -65,12 +65,12 @@ LitteraleNumerique *LitteraleRationnelle::convertToNumerique(TypeLitterale type)
     return this;
 }
 
-// LitteraleNombre *LitteraleRationnelle::convertToComplexe()
-// {
-//     return new LitteraleComplexe{cloneOnHeap(), new LitteraleEntier{}};
-// }
+LitteraleNombre *LitteraleRationnelle::convertToComplexe()
+{
+    return new LitteraleComplexe{cloneOnHeap(), new LitteraleEntier{1}};
+}
 
-LitteraleNumerique *LitteraleRationnelle::operator+(LitteraleNumerique &l)
+LitteraleNombre *LitteraleRationnelle::operator+(LitteraleNombre &l)
 {
     if (l.getType() != TypeLitterale::RATIONNEL)
     {
@@ -80,7 +80,7 @@ LitteraleNumerique *LitteraleRationnelle::operator+(LitteraleNumerique &l)
     return (new LitteraleRationnelle{num_ * l_cast.getDen() + den_ * l_cast.getNum(), den_ * l_cast.getDen()})->simplifier();
 }
 
-LitteraleNumerique *LitteraleRationnelle::operator-(LitteraleNumerique &l)
+LitteraleNombre *LitteraleRationnelle::operator-(LitteraleNombre &l)
 {
     if (l.getType() != TypeLitterale::RATIONNEL)
     {
@@ -90,7 +90,7 @@ LitteraleNumerique *LitteraleRationnelle::operator-(LitteraleNumerique &l)
     return (new LitteraleRationnelle{num_ * l_cast.getDen() - den_ * l_cast.getNum(), den_ * l_cast.getDen()})->simplifier();
 }
 
-LitteraleNumerique *LitteraleRationnelle::operator*(LitteraleNumerique &l)
+LitteraleNombre *LitteraleRationnelle::operator*(LitteraleNombre &l)
 {
     if (l.getType() != TypeLitterale::RATIONNEL)
     {
@@ -100,7 +100,7 @@ LitteraleNumerique *LitteraleRationnelle::operator*(LitteraleNumerique &l)
     return (new LitteraleRationnelle{num_ * l_cast.getNum(), den_ * l_cast.getDen()})->simplifier();
 }
 
-LitteraleNumerique *LitteraleRationnelle::operator/(LitteraleNumerique &l)
+LitteraleNombre *LitteraleRationnelle::operator/(LitteraleNombre &l)
 {
     if (l.getType() != TypeLitterale::RATIONNEL)
     {

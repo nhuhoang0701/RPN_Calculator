@@ -13,6 +13,10 @@ litterale.h
 /home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/litterale.h
 
 /home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/litterale_complexe.cpp
+iostream
+-
+litterale_complexe.h
+/home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/litterale_complexe.h
 
 /home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/litterale_entiere.cpp
 litterale_entiere.h
@@ -49,6 +53,8 @@ litterale_entiere.h
 /home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/litterale_entiere.h
 litterale_rationnelle.h
 /home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/litterale_rationnelle.h
+litterale_complexe.h
+/home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/litterale_complexe.h
 
 /home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/main.cpp
 iostream
@@ -61,6 +67,8 @@ litterale_rationnelle.h
 /home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/litterale_rationnelle.h
 litterale_reelle.h
 /home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/litterale_reelle.h
+litterale_complexe.h
+/home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/litterale_complexe.h
 
 /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/QString
 qstring.h
@@ -319,8 +327,12 @@ memory
 -
 QString
 -
+litterale_complexe.h
+include/litterale_complexe.h
 
 include/litterale_complexe.h
+litterale.h
+include/litterale.h
 
 include/litterale_entiere.h
 litterale.h

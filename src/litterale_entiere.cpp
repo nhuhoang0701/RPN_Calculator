@@ -29,12 +29,12 @@ LitteraleNumerique *LitteraleEntier::convertToNumerique(TypeLitterale type)
     }
 }
 
-// LitteraleNombre *LitteraleEntier::convertToComplexe()
-// {
-//     return new LitteraleComplexe{cloneOnHeap(), new LitteraleEntier{}};
-// }
+LitteraleNombre *LitteraleEntier::convertToComplexe()
+{
+    return new LitteraleComplexe{cloneOnHeap(), new LitteraleEntier{1}};
+}
 
-LitteraleNumerique *LitteraleEntier::operator+(LitteraleNumerique &l)
+LitteraleNombre *LitteraleEntier::operator+(LitteraleNombre &l)
 {
     if (l.getType() != TypeLitterale::ENTIER)
     {
@@ -43,7 +43,8 @@ LitteraleNumerique *LitteraleEntier::operator+(LitteraleNumerique &l)
     LitteraleEntier &l_cast = dynamic_cast<LitteraleEntier &>(l);
     return new LitteraleEntier{valeur_ + l_cast.valeur_};
 }
-LitteraleNumerique *LitteraleEntier::operator-(LitteraleNumerique &l)
+
+LitteraleNombre *LitteraleEntier::operator-(LitteraleNombre &l)
 {
     if (l.getType() != TypeLitterale::ENTIER)
     {
@@ -53,7 +54,7 @@ LitteraleNumerique *LitteraleEntier::operator-(LitteraleNumerique &l)
     return new LitteraleEntier{valeur_ - l_cast.valeur_};
 }
 
-LitteraleNumerique *LitteraleEntier::operator*(LitteraleNumerique &l)
+LitteraleNombre *LitteraleEntier::operator*(LitteraleNombre &l)
 {
     if (l.getType() != TypeLitterale::ENTIER)
     {
@@ -62,7 +63,7 @@ LitteraleNumerique *LitteraleEntier::operator*(LitteraleNumerique &l)
     LitteraleEntier &l_cast = dynamic_cast<LitteraleEntier &>(l);
     return new LitteraleEntier{valeur_ * l_cast.valeur_};
 }
-LitteraleNumerique *LitteraleEntier::operator/(LitteraleNumerique &l)
+LitteraleNombre *LitteraleEntier::operator/(LitteraleNombre &l)
 {
     if (l.getType() != TypeLitterale::ENTIER)
     {

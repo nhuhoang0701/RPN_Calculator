@@ -4,6 +4,7 @@
 #include "litterale_reelle.h"
 #include "litterale_entiere.h"
 #include "litterale_rationnelle.h"
+#include "litterale_complexe.h"
 
 LitteraleReelle::LitteraleReelle(int entier, double decimal)
     : entier_{entier}, decimal_{decimal}, valeur_{entier + decimal}
@@ -33,10 +34,10 @@ LitteraleNumerique *LitteraleReelle::convertToNumerique(TypeLitterale type)
     return this;
 }
 
-// LitteraleNombre *LitteraleReelle::convertToComplexe()
-// {
-//     return new LitteraleComplexe{cloneOnHeap(), new LitteraleEntier{}};
-// }
+LitteraleNombre *LitteraleReelle::convertToComplexe()
+{
+    return new LitteraleComplexe{cloneOnHeap(), new LitteraleEntier{1}};
+}
 
 LitteraleNumerique *LitteraleReelle::cloneOnHeap() const
 {
@@ -55,7 +56,7 @@ std::pair<int, double> LitteraleReelle::getRelleDivide(double valeur)
     return std::make_pair(partInt, partDecimal);
 }
 
-LitteraleNumerique *LitteraleReelle::operator+(LitteraleNumerique &l)
+LitteraleNombre *LitteraleReelle::operator+(LitteraleNombre &l)
 {
     if (l.getType() != TypeLitterale::REEL)
     {
@@ -66,7 +67,7 @@ LitteraleNumerique *LitteraleReelle::operator+(LitteraleNumerique &l)
     return new LitteraleReelle{pairDivide.first, pairDivide.second};
 }
 
-LitteraleNumerique *LitteraleReelle::operator-(LitteraleNumerique &l)
+LitteraleNombre *LitteraleReelle::operator-(LitteraleNombre &l)
 {
     if (l.getType() != TypeLitterale::REEL)
     {
@@ -77,7 +78,7 @@ LitteraleNumerique *LitteraleReelle::operator-(LitteraleNumerique &l)
     return new LitteraleReelle{pairDivide.first, pairDivide.second};
 }
 
-LitteraleNumerique *LitteraleReelle::operator*(LitteraleNumerique &l)
+LitteraleNombre *LitteraleReelle::operator*(LitteraleNombre &l)
 {
     if (l.getType() != TypeLitterale::REEL)
     {
@@ -88,7 +89,7 @@ LitteraleNumerique *LitteraleReelle::operator*(LitteraleNumerique &l)
     return new LitteraleReelle{pairDivide.first, pairDivide.second};
 }
 
-LitteraleNumerique *LitteraleReelle::operator/(LitteraleNumerique &l)
+LitteraleNombre *LitteraleReelle::operator/(LitteraleNombre &l)
 {
     if (l.getType() != TypeLitterale::REEL)
     {
