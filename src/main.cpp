@@ -5,6 +5,8 @@
 #include "litterale_rationnelle.h"
 #include "litterale_reelle.h"
 #include "litterale_complexe.h"
+#include "operateur.h"
+#include "operateur_numerique.h"
 
 class Base
 {
@@ -21,4 +23,14 @@ int main(int argc, char *argv[])
     std::cout << (*r2 / *r2)->affichage().toStdString() << '\n';
     std::cout << (*r3 - *r4)->affichage().toStdString() << '\n';
     std::cout << (*c2 - *c2)->affichage().toStdString() << '\n';
+    Operateur *op = new Division{};
+    try
+    {
+        std::cout << op->traitement(std::vector<Litterale *>{r1, r2})->affichage().toStdString();
+        /* code */
+    }
+    catch (const std::exception &e)
+    {
+        std::cerr << e.what() << '\n';
+    }
 }

@@ -4,16 +4,18 @@
 #include <memory>
 #include <QString>
 
+#include "operande.h"
+
+class LitteraleNombre;
 /*
 ** Litterale classe
 */
-class Litterale
+class Litterale : public Operande
 {
 public:
-    virtual ~Litterale() {}
-
     virtual const QString affichage(QString f = "") const = 0;
     virtual bool isNull() const = 0;
+    virtual LitteraleNombre *evaluer() = 0;
 };
 
 enum class TypeLitterale
@@ -34,13 +36,16 @@ public:
     virtual bool isPos() const = 0;
 
     virtual TypeLitterale getType() const { return typeLitterale_; }
+    virtual LitteraleNombre *evaluer() override { return this; }
     virtual LitteraleNombre *cloneOnHeap() const = 0;
     virtual LitteraleNombre *simplifier() = 0;
+
+    virtual LitteraleNombre *convertToComplexe() = 0;
+
     virtual LitteraleNombre *operator+(LitteraleNombre &l) = 0;
     virtual LitteraleNombre *operator-(LitteraleNombre &l) = 0;
     virtual LitteraleNombre *operator*(LitteraleNombre &l) = 0;
     virtual LitteraleNombre *operator/(LitteraleNombre &l) = 0;
-    virtual LitteraleNombre *convertToComplexe() = 0;
 
 protected:
     TypeLitterale typeLitterale_;

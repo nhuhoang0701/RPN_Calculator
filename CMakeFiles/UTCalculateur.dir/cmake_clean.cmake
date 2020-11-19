@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/UTCalculateur.dir/src/litterale_rationnelle.cpp.o"
   "CMakeFiles/UTCalculateur.dir/src/litterale_reelle.cpp.o"
   "CMakeFiles/UTCalculateur.dir/src/main.cpp.o"
+  "CMakeFiles/UTCalculateur.dir/src/operateur_numerique.cpp.o"
+  "CMakeFiles/UTCalculateur.dir/src/pile.cpp.o"
   "CMakeFiles/UTCalculateur.dir/UTCalculateur_autogen/mocs_compilation.cpp.o"
   "UTCalculateur.pdb"
   "UTCalculateur"

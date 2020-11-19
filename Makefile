@@ -347,6 +347,60 @@ src/main.cpp.s:
 	$(MAKE) -f CMakeFiles/UTCalculateur.dir/build.make CMakeFiles/UTCalculateur.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/operateur_numerique.o: src/operateur_numerique.cpp.o
+
+.PHONY : src/operateur_numerique.o
+
+# target to build an object file
+src/operateur_numerique.cpp.o:
+	$(MAKE) -f CMakeFiles/UTCalculateur.dir/build.make CMakeFiles/UTCalculateur.dir/src/operateur_numerique.cpp.o
+.PHONY : src/operateur_numerique.cpp.o
+
+src/operateur_numerique.i: src/operateur_numerique.cpp.i
+
+.PHONY : src/operateur_numerique.i
+
+# target to preprocess a source file
+src/operateur_numerique.cpp.i:
+	$(MAKE) -f CMakeFiles/UTCalculateur.dir/build.make CMakeFiles/UTCalculateur.dir/src/operateur_numerique.cpp.i
+.PHONY : src/operateur_numerique.cpp.i
+
+src/operateur_numerique.s: src/operateur_numerique.cpp.s
+
+.PHONY : src/operateur_numerique.s
+
+# target to generate assembly for a file
+src/operateur_numerique.cpp.s:
+	$(MAKE) -f CMakeFiles/UTCalculateur.dir/build.make CMakeFiles/UTCalculateur.dir/src/operateur_numerique.cpp.s
+.PHONY : src/operateur_numerique.cpp.s
+
+src/pile.o: src/pile.cpp.o
+
+.PHONY : src/pile.o
+
+# target to build an object file
+src/pile.cpp.o:
+	$(MAKE) -f CMakeFiles/UTCalculateur.dir/build.make CMakeFiles/UTCalculateur.dir/src/pile.cpp.o
+.PHONY : src/pile.cpp.o
+
+src/pile.i: src/pile.cpp.i
+
+.PHONY : src/pile.i
+
+# target to preprocess a source file
+src/pile.cpp.i:
+	$(MAKE) -f CMakeFiles/UTCalculateur.dir/build.make CMakeFiles/UTCalculateur.dir/src/pile.cpp.i
+.PHONY : src/pile.cpp.i
+
+src/pile.s: src/pile.cpp.s
+
+.PHONY : src/pile.s
+
+# target to generate assembly for a file
+src/pile.cpp.s:
+	$(MAKE) -f CMakeFiles/UTCalculateur.dir/build.make CMakeFiles/UTCalculateur.dir/src/pile.cpp.s
+.PHONY : src/pile.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -380,6 +434,12 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/operateur_numerique.o"
+	@echo "... src/operateur_numerique.i"
+	@echo "... src/operateur_numerique.s"
+	@echo "... src/pile.o"
+	@echo "... src/pile.i"
+	@echo "... src/pile.s"
 .PHONY : help
 
 
