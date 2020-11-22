@@ -57,7 +57,7 @@ LitteraleNombre *LitteraleComplexe::operator*(LitteraleNombre &l)
     }
     LitteraleComplexe &l_cast = dynamic_cast<LitteraleComplexe &>(l);
 
-    //todo fix product of 2 litteraleComplexe
+    //todo: Fix product of 2 litteraleComplexe
     return new LitteraleComplexe{*partRe_ * *(l_cast.partRe_),
                                  *partIm_ * *(l_cast.partIm_)};
 }
@@ -70,7 +70,7 @@ LitteraleNombre *LitteraleComplexe::operator/(LitteraleNombre &l)
     }
     LitteraleComplexe &l_cast = dynamic_cast<LitteraleComplexe &>(l);
 
-    //todo fix division of 2 litteraleComplexe
+    //todo: Fix division of 2 litteraleComplexe
     return new LitteraleComplexe{*partRe_ / *(l_cast.partRe_),
                                  *partIm_ + *(l_cast.partIm_)};
 }

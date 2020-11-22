@@ -185,6 +185,33 @@ UTCalculateur_autogen/mocs_compilation.cpp.s:
 	$(MAKE) -f CMakeFiles/UTCalculateur.dir/build.make CMakeFiles/UTCalculateur.dir/UTCalculateur_autogen/mocs_compilation.cpp.s
 .PHONY : UTCalculateur_autogen/mocs_compilation.cpp.s
 
+src/controleur.o: src/controleur.cpp.o
+
+.PHONY : src/controleur.o
+
+# target to build an object file
+src/controleur.cpp.o:
+	$(MAKE) -f CMakeFiles/UTCalculateur.dir/build.make CMakeFiles/UTCalculateur.dir/src/controleur.cpp.o
+.PHONY : src/controleur.cpp.o
+
+src/controleur.i: src/controleur.cpp.i
+
+.PHONY : src/controleur.i
+
+# target to preprocess a source file
+src/controleur.cpp.i:
+	$(MAKE) -f CMakeFiles/UTCalculateur.dir/build.make CMakeFiles/UTCalculateur.dir/src/controleur.cpp.i
+.PHONY : src/controleur.cpp.i
+
+src/controleur.s: src/controleur.cpp.s
+
+.PHONY : src/controleur.s
+
+# target to generate assembly for a file
+src/controleur.cpp.s:
+	$(MAKE) -f CMakeFiles/UTCalculateur.dir/build.make CMakeFiles/UTCalculateur.dir/src/controleur.cpp.s
+.PHONY : src/controleur.cpp.s
+
 src/litterale.o: src/litterale.cpp.o
 
 .PHONY : src/litterale.o
@@ -401,6 +428,60 @@ src/pile.cpp.s:
 	$(MAKE) -f CMakeFiles/UTCalculateur.dir/build.make CMakeFiles/UTCalculateur.dir/src/pile.cpp.s
 .PHONY : src/pile.cpp.s
 
+src/qcalculateur.o: src/qcalculateur.cpp.o
+
+.PHONY : src/qcalculateur.o
+
+# target to build an object file
+src/qcalculateur.cpp.o:
+	$(MAKE) -f CMakeFiles/UTCalculateur.dir/build.make CMakeFiles/UTCalculateur.dir/src/qcalculateur.cpp.o
+.PHONY : src/qcalculateur.cpp.o
+
+src/qcalculateur.i: src/qcalculateur.cpp.i
+
+.PHONY : src/qcalculateur.i
+
+# target to preprocess a source file
+src/qcalculateur.cpp.i:
+	$(MAKE) -f CMakeFiles/UTCalculateur.dir/build.make CMakeFiles/UTCalculateur.dir/src/qcalculateur.cpp.i
+.PHONY : src/qcalculateur.cpp.i
+
+src/qcalculateur.s: src/qcalculateur.cpp.s
+
+.PHONY : src/qcalculateur.s
+
+# target to generate assembly for a file
+src/qcalculateur.cpp.s:
+	$(MAKE) -f CMakeFiles/UTCalculateur.dir/build.make CMakeFiles/UTCalculateur.dir/src/qcalculateur.cpp.s
+.PHONY : src/qcalculateur.cpp.s
+
+src/qclavier.o: src/qclavier.cpp.o
+
+.PHONY : src/qclavier.o
+
+# target to build an object file
+src/qclavier.cpp.o:
+	$(MAKE) -f CMakeFiles/UTCalculateur.dir/build.make CMakeFiles/UTCalculateur.dir/src/qclavier.cpp.o
+.PHONY : src/qclavier.cpp.o
+
+src/qclavier.i: src/qclavier.cpp.i
+
+.PHONY : src/qclavier.i
+
+# target to preprocess a source file
+src/qclavier.cpp.i:
+	$(MAKE) -f CMakeFiles/UTCalculateur.dir/build.make CMakeFiles/UTCalculateur.dir/src/qclavier.cpp.i
+.PHONY : src/qclavier.cpp.i
+
+src/qclavier.s: src/qclavier.cpp.s
+
+.PHONY : src/qclavier.s
+
+# target to generate assembly for a file
+src/qclavier.cpp.s:
+	$(MAKE) -f CMakeFiles/UTCalculateur.dir/build.make CMakeFiles/UTCalculateur.dir/src/qclavier.cpp.s
+.PHONY : src/qclavier.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -416,6 +497,9 @@ help:
 	@echo "... UTCalculateur_autogen/mocs_compilation.o"
 	@echo "... UTCalculateur_autogen/mocs_compilation.i"
 	@echo "... UTCalculateur_autogen/mocs_compilation.s"
+	@echo "... src/controleur.o"
+	@echo "... src/controleur.i"
+	@echo "... src/controleur.s"
 	@echo "... src/litterale.o"
 	@echo "... src/litterale.i"
 	@echo "... src/litterale.s"
@@ -440,6 +524,12 @@ help:
 	@echo "... src/pile.o"
 	@echo "... src/pile.i"
 	@echo "... src/pile.s"
+	@echo "... src/qcalculateur.o"
+	@echo "... src/qcalculateur.i"
+	@echo "... src/qcalculateur.s"
+	@echo "... src/qclavier.o"
+	@echo "... src/qclavier.i"
+	@echo "... src/qclavier.s"
 .PHONY : help
 
 

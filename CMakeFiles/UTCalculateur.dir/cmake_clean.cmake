@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "UTCalculateur_autogen"
   "CMakeFiles/UTCalculateur_autogen.dir/AutogenOldSettings.cmake"
+  "CMakeFiles/UTCalculateur.dir/src/controleur.cpp.o"
   "CMakeFiles/UTCalculateur.dir/src/litterale.cpp.o"
   "CMakeFiles/UTCalculateur.dir/src/litterale_complexe.cpp.o"
   "CMakeFiles/UTCalculateur.dir/src/litterale_entiere.cpp.o"
@@ -9,6 +10,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/UTCalculateur.dir/src/main.cpp.o"
   "CMakeFiles/UTCalculateur.dir/src/operateur_numerique.cpp.o"
   "CMakeFiles/UTCalculateur.dir/src/pile.cpp.o"
+  "CMakeFiles/UTCalculateur.dir/src/qcalculateur.cpp.o"
+  "CMakeFiles/UTCalculateur.dir/src/qclavier.cpp.o"
   "CMakeFiles/UTCalculateur.dir/UTCalculateur_autogen/mocs_compilation.cpp.o"
   "UTCalculateur.pdb"
   "UTCalculateur"

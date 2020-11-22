@@ -4,18 +4,18 @@
 #include <memory>
 #include <QString>
 
-#include "operande.h"
-
 class LitteraleNombre;
 /*
 ** Litterale classe
 */
-class Litterale : public Operande
+class Litterale
 {
 public:
+    virtual ~Litterale() {}
     virtual const QString affichage(QString f = "") const = 0;
     virtual bool isNull() const = 0;
     virtual LitteraleNombre *evaluer() = 0;
+    virtual LitteraleNombre *cloneOnHeap() const = 0;
 };
 
 enum class TypeLitterale
@@ -24,6 +24,9 @@ enum class TypeLitterale
     RATIONNEL,
     REEL,
     COMPLEXE,
+    EXPRESSION,
+    PROGRAMME,
+    NONE,
 };
 
 class LitteraleNumerique;

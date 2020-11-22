@@ -1,6 +1,12 @@
 [
 {
   "directory": "/home/hoangkplog/Desktop/CPP_Project/UTCalculateur/build",
+  "command": "/usr/bin/g++-10  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -IUTCalculateur_autogen/include -I../include -I../src -isystem /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include -isystem /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets -isystem /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtGui -isystem /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore -isystem /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/./mkspecs/linux-g++  -g   -fPIC -std=c++1z -o CMakeFiles/UTCalculateur.dir/src/controleur.cpp.o -c /home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/controleur.cpp",
+  "file": "/home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/controleur.cpp"
+},
+
+{
+  "directory": "/home/hoangkplog/Desktop/CPP_Project/UTCalculateur/build",
   "command": "/usr/bin/g++-10  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -IUTCalculateur_autogen/include -I../include -I../src -isystem /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include -isystem /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets -isystem /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtGui -isystem /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore -isystem /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/./mkspecs/linux-g++  -g   -fPIC -std=c++1z -o CMakeFiles/UTCalculateur.dir/src/litterale.cpp.o -c /home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/litterale.cpp",
   "file": "/home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/litterale.cpp"
 },
@@ -45,6 +51,18 @@
   "directory": "/home/hoangkplog/Desktop/CPP_Project/UTCalculateur/build",
   "command": "/usr/bin/g++-10  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -IUTCalculateur_autogen/include -I../include -I../src -isystem /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include -isystem /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets -isystem /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtGui -isystem /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore -isystem /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/./mkspecs/linux-g++  -g   -fPIC -std=c++1z -o CMakeFiles/UTCalculateur.dir/src/pile.cpp.o -c /home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/pile.cpp",
   "file": "/home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/pile.cpp"
+},
+
+{
+  "directory": "/home/hoangkplog/Desktop/CPP_Project/UTCalculateur/build",
+  "command": "/usr/bin/g++-10  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -IUTCalculateur_autogen/include -I../include -I../src -isystem /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include -isystem /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets -isystem /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtGui -isystem /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore -isystem /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/./mkspecs/linux-g++  -g   -fPIC -std=c++1z -o CMakeFiles/UTCalculateur.dir/src/qcalculateur.cpp.o -c /home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/qcalculateur.cpp",
+  "file": "/home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/qcalculateur.cpp"
+},
+
+{
+  "directory": "/home/hoangkplog/Desktop/CPP_Project/UTCalculateur/build",
+  "command": "/usr/bin/g++-10  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -IUTCalculateur_autogen/include -I../include -I../src -isystem /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include -isystem /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets -isystem /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtGui -isystem /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore -isystem /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/./mkspecs/linux-g++  -g   -fPIC -std=c++1z -o CMakeFiles/UTCalculateur.dir/src/qclavier.cpp.o -c /home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/qclavier.cpp",
+  "file": "/home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/qclavier.cpp"
 },
 
 {

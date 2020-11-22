@@ -6,12 +6,16 @@
 class LitteraleComplexe : public LitteraleNombre
 {
 private:
-    LitteraleNombre* partRe_;
-    LitteraleNombre* partIm_;
+    LitteraleNombre *partRe_;
+    LitteraleNombre *partIm_;
 
 public:
     LitteraleComplexe(LitteraleNombre *re, LitteraleNombre *im);
-
+    ~LitteraleComplexe()
+    {
+        delete partRe_;
+        delete partIm_;
+    }
     const LitteraleNombre &getPartRe() const { return *partRe_; }
     const LitteraleNombre &getPartIm() const { return *partIm_; }
 
@@ -23,10 +27,10 @@ public:
     LitteraleNombre *cloneOnHeap() const override;
     LitteraleNombre *convertToComplexe() override { return cloneOnHeap(); }
 
-    LitteraleNombre *operator+(LitteraleNombre &l);
-    LitteraleNombre *operator-(LitteraleNombre &l);
-    LitteraleNombre *operator*(LitteraleNombre &l);
-    LitteraleNombre *operator/(LitteraleNombre &l);
+    LitteraleNombre *operator+(LitteraleNombre &l) override;
+    LitteraleNombre *operator-(LitteraleNombre &l) override;
+    LitteraleNombre *operator*(LitteraleNombre &l) override;
+    LitteraleNombre *operator/(LitteraleNombre &l) override;
 };
 
 #endif // __LITTERALE_COMPLEXE_H__

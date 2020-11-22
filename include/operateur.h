@@ -19,6 +19,7 @@ public:
     virtual ~Operateur() {}
 
     QString getSymbol() { return symbol_; }
+    int getArite() { return arite_; }
     void checkArite(unsigned int taille)
     {
         std::string message = "Opérande " + symbol_.toStdString() + " demande " + std::to_string(arite_) +
