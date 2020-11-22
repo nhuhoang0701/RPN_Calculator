@@ -1,4 +1,5 @@
 #include <algorithm>
+#include <cmath>
 
 #include "exceptions.h"
 #include "litterale_rationnelle.h"
@@ -26,7 +27,7 @@ LitteraleRationnelle::LitteraleRationnelle(int num, int den)
 
 const QString LitteraleRationnelle::affichage(QString f) const
 {
-return    f.append(QString::number(num_) + QString{"/"} + QString::number(den_));
+    return f.append(QString::number(num_) + QString{"/"} + QString::number(den_));
 }
 LitteraleNumerique *LitteraleRationnelle::cloneOnHeap() const
 {
@@ -48,6 +49,21 @@ LitteraleNumerique *LitteraleRationnelle::simplifier()
         return new LitteraleEntier{num_};
     }
     return this;
+}
+
+LitteraleNumerique *LitteraleRationnelle::puissance(LitteraleReelle &l)
+{
+    double num = std::pow(num_, l.getValeur());
+    double den = std::pow(den_, l.getValeur());
+    if (!den)
+    {
+        throw CalculateurException("Denominateur est égal 0!");
+    }
+    if (num == std::floor(num) && den == std::floor(den))
+    {
+        return (new LitteraleRationnelle{static_cast<int>(num), static_cast<int>(den)})->simplifier();
+    }
+    return new LitteraleReelle{num/den};
 }
 
 LitteraleNumerique *LitteraleRationnelle::convertToNumerique(TypeLitterale type)
@@ -107,5 +123,9 @@ LitteraleNombre *LitteraleRationnelle::operator/(LitteraleNombre &l)
         return LitteraleNumerique::operator/(l);
     }
     LitteraleRationnelle &l_cast = dynamic_cast<LitteraleRationnelle &>(l);
+    if (l_cast.isNull())
+    {
+        throw CalculateurException{"Impossible de divider à 0!"};
+    }
     return (new LitteraleRationnelle{num_ * l_cast.getDen(), den_ * l_cast.getNum()})->simplifier();
 }

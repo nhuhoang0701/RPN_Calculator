@@ -43,8 +43,20 @@
 
 {
   "directory": "/home/hoangkplog/Desktop/CPP_Project/UTCalculateur/build",
-  "command": "/usr/bin/g++-10  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -IUTCalculateur_autogen/include -I../include -I../src -isystem /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include -isystem /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets -isystem /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtGui -isystem /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore -isystem /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/./mkspecs/linux-g++  -g   -fPIC -std=c++1z -o CMakeFiles/UTCalculateur.dir/src/operateur_numerique.cpp.o -c /home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/operateur_numerique.cpp",
-  "file": "/home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/operateur_numerique.cpp"
+  "command": "/usr/bin/g++-10  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -IUTCalculateur_autogen/include -I../include -I../src -isystem /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include -isystem /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets -isystem /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtGui -isystem /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore -isystem /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/./mkspecs/linux-g++  -g   -fPIC -std=c++1z -o CMakeFiles/UTCalculateur.dir/src/operateur.cpp.o -c /home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/operateur.cpp",
+  "file": "/home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/operateur.cpp"
+},
+
+{
+  "directory": "/home/hoangkplog/Desktop/CPP_Project/UTCalculateur/build",
+  "command": "/usr/bin/g++-10  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -IUTCalculateur_autogen/include -I../include -I../src -isystem /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include -isystem /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets -isystem /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtGui -isystem /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore -isystem /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/./mkspecs/linux-g++  -g   -fPIC -std=c++1z -o CMakeFiles/UTCalculateur.dir/src/operateur_binaire.cpp.o -c /home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/operateur_binaire.cpp",
+  "file": "/home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/operateur_binaire.cpp"
+},
+
+{
+  "directory": "/home/hoangkplog/Desktop/CPP_Project/UTCalculateur/build",
+  "command": "/usr/bin/g++-10  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -IUTCalculateur_autogen/include -I../include -I../src -isystem /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include -isystem /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets -isystem /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtGui -isystem /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore -isystem /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/./mkspecs/linux-g++  -g   -fPIC -std=c++1z -o CMakeFiles/UTCalculateur.dir/src/operateur_unaire.cpp.o -c /home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/operateur_unaire.cpp",
+  "file": "/home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/operateur_unaire.cpp"
 },
 
 {

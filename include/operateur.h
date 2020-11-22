@@ -20,17 +20,11 @@ public:
 
     QString getSymbol() { return symbol_; }
     int getArite() { return arite_; }
-    void checkArite(unsigned int taille)
-    {
-        std::string message = "Opérande " + symbol_.toStdString() + " demande " + std::to_string(arite_) +
-                              " arguments, " + std::to_string(taille) + " passé(s)!!";
+    void checkArite(unsigned int taille);
 
-        if (arite_ != taille)
-        {
-            throw CalculateurException{message.c_str()};
-        }
-    }
     virtual LitteraleNombre *traitement(const std::vector<Litterale *> &arguments) = 0;
+
+    static Operateur* getOperateur(const QString& symbol);
 };
 
 #endif // __OPERATEUR_H__

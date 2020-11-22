@@ -167,8 +167,8 @@ litterale_rationnelle.h
 /home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/litterale_rationnelle.h
 litterale_reelle.h
 /home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/litterale_reelle.h
-operateur_numerique.h
-/home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/operateur_numerique.h
+operateur_binaire.h
+/home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/operateur_binaire.h
 
 /home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/litterale.cpp
 litterale.h
@@ -177,10 +177,18 @@ litterale.h
 /home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/litterale_complexe.cpp
 iostream
 -
+complex
+-
 litterale_complexe.h
 /home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/litterale_complexe.h
 
 /home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/litterale_entiere.cpp
+iostream
+-
+cmath
+-
+exceptions.h
+/home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/exceptions.h
 litterale_entiere.h
 /home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/litterale_entiere.h
 litterale_rationnelle.h
@@ -192,6 +200,8 @@ litterale_complexe.h
 
 /home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/litterale_rationnelle.cpp
 algorithm
+-
+cmath
 -
 exceptions.h
 /home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/exceptions.h
@@ -237,16 +247,42 @@ litterale_complexe.h
 /home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/litterale_complexe.h
 operateur.h
 /home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/operateur.h
-operateur_numerique.h
-/home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/operateur_numerique.h
+operateur_binaire.h
+/home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/operateur_binaire.h
 qcalculateur.h
 /home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/qcalculateur.h
 pile.h
 /home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/pile.h
 
-/home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/operateur_numerique.cpp
-operateur_numerique.h
-/home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/operateur_numerique.h
+/home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/operateur.cpp
+map
+-
+iostream
+-
+memory
+-
+operateur.h
+/home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/operateur.h
+operateur_binaire.h
+/home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/operateur_binaire.h
+operateur_unaire.h
+/home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/operateur_unaire.h
+
+/home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/operateur_binaire.cpp
+QString
+-
+iostream
+-
+operateur_binaire.h
+/home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/operateur_binaire.h
+litterale_entiere.h
+/home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/litterale_entiere.h
+litterale_reelle.h
+/home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/litterale_reelle.h
+
+/home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/operateur_unaire.cpp
+operateur_unaire.h
+/home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/operateur_unaire.h
 
 /home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/pile.cpp
 pile.h
@@ -1886,7 +1922,13 @@ include/litterale.h
 exceptions.h
 include/exceptions.h
 
-include/operateur_numerique.h
+include/operateur_binaire.h
+operateur.h
+include/operateur.h
+
+include/operateur_unaire.h
+QString
+-
 operateur.h
 include/operateur.h
 

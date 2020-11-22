@@ -50,7 +50,7 @@ public:
     QLineEdit &getCommandBar() { return *commandeBar_; }
     Controleur &getControleur() { return controleur_; }
     void setMessage(const QString &s) { message_->setText(s); }
-    bool calculerOperateurSimple(QString op = "");
+    bool calculerAutoOperateur(QString op = "");
     void renderVuePile();
 
 private slots:

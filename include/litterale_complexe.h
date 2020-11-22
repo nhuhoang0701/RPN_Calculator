@@ -25,6 +25,7 @@ public:
     const QString affichage(QString f) const override;
     LitteraleComplexe *simplifier() override;
     LitteraleNombre *cloneOnHeap() const override;
+    LitteraleNombre *puissance(LitteraleReelle &l) override;
     LitteraleNombre *convertToComplexe() override { return cloneOnHeap(); }
 
     LitteraleNombre *operator+(LitteraleNombre &l) override;

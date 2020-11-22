@@ -45,13 +45,11 @@ public:
     QClavier(QCalculateur &calculateur);
 
 private slots:
-    void digitClicked();
     void addTextClicked();
     void deleteClicked();
-    void simpleOperatorClicked();
-    void unaryOperatorClicked();
+    void autoOperatorClicked();
     void enterClicked();
-    bool calculerOperateurSimple(QString op);
+    bool calculerAutoOperateur(QString op);
 };
 
 #endif // __QCLAVIER_H__

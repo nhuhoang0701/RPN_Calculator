@@ -225,33 +225,81 @@ CMakeFiles/UTCalculateur.dir/src/main.cpp.o.provides: CMakeFiles/UTCalculateur.d
 CMakeFiles/UTCalculateur.dir/src/main.cpp.o.provides.build: CMakeFiles/UTCalculateur.dir/src/main.cpp.o
 
 
-CMakeFiles/UTCalculateur.dir/src/operateur_numerique.cpp.o: CMakeFiles/UTCalculateur.dir/flags.make
-CMakeFiles/UTCalculateur.dir/src/operateur_numerique.cpp.o: src/operateur_numerique.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hoangkplog/Desktop/CPP_Project/UTCalculateur/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/UTCalculateur.dir/src/operateur_numerique.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/UTCalculateur.dir/src/operateur_numerique.cpp.o -c /home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/operateur_numerique.cpp
+CMakeFiles/UTCalculateur.dir/src/operateur.cpp.o: CMakeFiles/UTCalculateur.dir/flags.make
+CMakeFiles/UTCalculateur.dir/src/operateur.cpp.o: src/operateur.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hoangkplog/Desktop/CPP_Project/UTCalculateur/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/UTCalculateur.dir/src/operateur.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/UTCalculateur.dir/src/operateur.cpp.o -c /home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/operateur.cpp
 
-CMakeFiles/UTCalculateur.dir/src/operateur_numerique.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/UTCalculateur.dir/src/operateur_numerique.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/operateur_numerique.cpp > CMakeFiles/UTCalculateur.dir/src/operateur_numerique.cpp.i
+CMakeFiles/UTCalculateur.dir/src/operateur.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/UTCalculateur.dir/src/operateur.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/operateur.cpp > CMakeFiles/UTCalculateur.dir/src/operateur.cpp.i
 
-CMakeFiles/UTCalculateur.dir/src/operateur_numerique.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/UTCalculateur.dir/src/operateur_numerique.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/operateur_numerique.cpp -o CMakeFiles/UTCalculateur.dir/src/operateur_numerique.cpp.s
+CMakeFiles/UTCalculateur.dir/src/operateur.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/UTCalculateur.dir/src/operateur.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/operateur.cpp -o CMakeFiles/UTCalculateur.dir/src/operateur.cpp.s
 
-CMakeFiles/UTCalculateur.dir/src/operateur_numerique.cpp.o.requires:
+CMakeFiles/UTCalculateur.dir/src/operateur.cpp.o.requires:
 
-.PHONY : CMakeFiles/UTCalculateur.dir/src/operateur_numerique.cpp.o.requires
+.PHONY : CMakeFiles/UTCalculateur.dir/src/operateur.cpp.o.requires
 
-CMakeFiles/UTCalculateur.dir/src/operateur_numerique.cpp.o.provides: CMakeFiles/UTCalculateur.dir/src/operateur_numerique.cpp.o.requires
-	$(MAKE) -f CMakeFiles/UTCalculateur.dir/build.make CMakeFiles/UTCalculateur.dir/src/operateur_numerique.cpp.o.provides.build
-.PHONY : CMakeFiles/UTCalculateur.dir/src/operateur_numerique.cpp.o.provides
+CMakeFiles/UTCalculateur.dir/src/operateur.cpp.o.provides: CMakeFiles/UTCalculateur.dir/src/operateur.cpp.o.requires
+	$(MAKE) -f CMakeFiles/UTCalculateur.dir/build.make CMakeFiles/UTCalculateur.dir/src/operateur.cpp.o.provides.build
+.PHONY : CMakeFiles/UTCalculateur.dir/src/operateur.cpp.o.provides
 
-CMakeFiles/UTCalculateur.dir/src/operateur_numerique.cpp.o.provides.build: CMakeFiles/UTCalculateur.dir/src/operateur_numerique.cpp.o
+CMakeFiles/UTCalculateur.dir/src/operateur.cpp.o.provides.build: CMakeFiles/UTCalculateur.dir/src/operateur.cpp.o
+
+
+CMakeFiles/UTCalculateur.dir/src/operateur_binaire.cpp.o: CMakeFiles/UTCalculateur.dir/flags.make
+CMakeFiles/UTCalculateur.dir/src/operateur_binaire.cpp.o: src/operateur_binaire.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hoangkplog/Desktop/CPP_Project/UTCalculateur/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/UTCalculateur.dir/src/operateur_binaire.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/UTCalculateur.dir/src/operateur_binaire.cpp.o -c /home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/operateur_binaire.cpp
+
+CMakeFiles/UTCalculateur.dir/src/operateur_binaire.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/UTCalculateur.dir/src/operateur_binaire.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/operateur_binaire.cpp > CMakeFiles/UTCalculateur.dir/src/operateur_binaire.cpp.i
+
+CMakeFiles/UTCalculateur.dir/src/operateur_binaire.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/UTCalculateur.dir/src/operateur_binaire.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/operateur_binaire.cpp -o CMakeFiles/UTCalculateur.dir/src/operateur_binaire.cpp.s
+
+CMakeFiles/UTCalculateur.dir/src/operateur_binaire.cpp.o.requires:
+
+.PHONY : CMakeFiles/UTCalculateur.dir/src/operateur_binaire.cpp.o.requires
+
+CMakeFiles/UTCalculateur.dir/src/operateur_binaire.cpp.o.provides: CMakeFiles/UTCalculateur.dir/src/operateur_binaire.cpp.o.requires
+	$(MAKE) -f CMakeFiles/UTCalculateur.dir/build.make CMakeFiles/UTCalculateur.dir/src/operateur_binaire.cpp.o.provides.build
+.PHONY : CMakeFiles/UTCalculateur.dir/src/operateur_binaire.cpp.o.provides
+
+CMakeFiles/UTCalculateur.dir/src/operateur_binaire.cpp.o.provides.build: CMakeFiles/UTCalculateur.dir/src/operateur_binaire.cpp.o
+
+
+CMakeFiles/UTCalculateur.dir/src/operateur_unaire.cpp.o: CMakeFiles/UTCalculateur.dir/flags.make
+CMakeFiles/UTCalculateur.dir/src/operateur_unaire.cpp.o: src/operateur_unaire.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hoangkplog/Desktop/CPP_Project/UTCalculateur/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/UTCalculateur.dir/src/operateur_unaire.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/UTCalculateur.dir/src/operateur_unaire.cpp.o -c /home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/operateur_unaire.cpp
+
+CMakeFiles/UTCalculateur.dir/src/operateur_unaire.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/UTCalculateur.dir/src/operateur_unaire.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/operateur_unaire.cpp > CMakeFiles/UTCalculateur.dir/src/operateur_unaire.cpp.i
+
+CMakeFiles/UTCalculateur.dir/src/operateur_unaire.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/UTCalculateur.dir/src/operateur_unaire.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/operateur_unaire.cpp -o CMakeFiles/UTCalculateur.dir/src/operateur_unaire.cpp.s
+
+CMakeFiles/UTCalculateur.dir/src/operateur_unaire.cpp.o.requires:
+
+.PHONY : CMakeFiles/UTCalculateur.dir/src/operateur_unaire.cpp.o.requires
+
+CMakeFiles/UTCalculateur.dir/src/operateur_unaire.cpp.o.provides: CMakeFiles/UTCalculateur.dir/src/operateur_unaire.cpp.o.requires
+	$(MAKE) -f CMakeFiles/UTCalculateur.dir/build.make CMakeFiles/UTCalculateur.dir/src/operateur_unaire.cpp.o.provides.build
+.PHONY : CMakeFiles/UTCalculateur.dir/src/operateur_unaire.cpp.o.provides
+
+CMakeFiles/UTCalculateur.dir/src/operateur_unaire.cpp.o.provides.build: CMakeFiles/UTCalculateur.dir/src/operateur_unaire.cpp.o
 
 
 CMakeFiles/UTCalculateur.dir/src/pile.cpp.o: CMakeFiles/UTCalculateur.dir/flags.make
 CMakeFiles/UTCalculateur.dir/src/pile.cpp.o: src/pile.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hoangkplog/Desktop/CPP_Project/UTCalculateur/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/UTCalculateur.dir/src/pile.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hoangkplog/Desktop/CPP_Project/UTCalculateur/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/UTCalculateur.dir/src/pile.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/UTCalculateur.dir/src/pile.cpp.o -c /home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/pile.cpp
 
 CMakeFiles/UTCalculateur.dir/src/pile.cpp.i: cmake_force
@@ -275,7 +323,7 @@ CMakeFiles/UTCalculateur.dir/src/pile.cpp.o.provides.build: CMakeFiles/UTCalcula
 
 CMakeFiles/UTCalculateur.dir/src/qcalculateur.cpp.o: CMakeFiles/UTCalculateur.dir/flags.make
 CMakeFiles/UTCalculateur.dir/src/qcalculateur.cpp.o: src/qcalculateur.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hoangkplog/Desktop/CPP_Project/UTCalculateur/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/UTCalculateur.dir/src/qcalculateur.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hoangkplog/Desktop/CPP_Project/UTCalculateur/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/UTCalculateur.dir/src/qcalculateur.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/UTCalculateur.dir/src/qcalculateur.cpp.o -c /home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/qcalculateur.cpp
 
 CMakeFiles/UTCalculateur.dir/src/qcalculateur.cpp.i: cmake_force
@@ -299,7 +347,7 @@ CMakeFiles/UTCalculateur.dir/src/qcalculateur.cpp.o.provides.build: CMakeFiles/U
 
 CMakeFiles/UTCalculateur.dir/src/qclavier.cpp.o: CMakeFiles/UTCalculateur.dir/flags.make
 CMakeFiles/UTCalculateur.dir/src/qclavier.cpp.o: src/qclavier.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hoangkplog/Desktop/CPP_Project/UTCalculateur/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/UTCalculateur.dir/src/qclavier.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hoangkplog/Desktop/CPP_Project/UTCalculateur/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/UTCalculateur.dir/src/qclavier.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/UTCalculateur.dir/src/qclavier.cpp.o -c /home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/qclavier.cpp
 
 CMakeFiles/UTCalculateur.dir/src/qclavier.cpp.i: cmake_force
@@ -323,7 +371,7 @@ CMakeFiles/UTCalculateur.dir/src/qclavier.cpp.o.provides.build: CMakeFiles/UTCal
 
 CMakeFiles/UTCalculateur.dir/UTCalculateur_autogen/mocs_compilation.cpp.o: CMakeFiles/UTCalculateur.dir/flags.make
 CMakeFiles/UTCalculateur.dir/UTCalculateur_autogen/mocs_compilation.cpp.o: UTCalculateur_autogen/mocs_compilation.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hoangkplog/Desktop/CPP_Project/UTCalculateur/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/UTCalculateur.dir/UTCalculateur_autogen/mocs_compilation.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hoangkplog/Desktop/CPP_Project/UTCalculateur/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/UTCalculateur.dir/UTCalculateur_autogen/mocs_compilation.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/UTCalculateur.dir/UTCalculateur_autogen/mocs_compilation.cpp.o -c /home/hoangkplog/Desktop/CPP_Project/UTCalculateur/UTCalculateur_autogen/mocs_compilation.cpp
 
 CMakeFiles/UTCalculateur.dir/UTCalculateur_autogen/mocs_compilation.cpp.i: cmake_force
@@ -354,7 +402,9 @@ UTCalculateur_OBJECTS = \
 "CMakeFiles/UTCalculateur.dir/src/litterale_rationnelle.cpp.o" \
 "CMakeFiles/UTCalculateur.dir/src/litterale_reelle.cpp.o" \
 "CMakeFiles/UTCalculateur.dir/src/main.cpp.o" \
-"CMakeFiles/UTCalculateur.dir/src/operateur_numerique.cpp.o" \
+"CMakeFiles/UTCalculateur.dir/src/operateur.cpp.o" \
+"CMakeFiles/UTCalculateur.dir/src/operateur_binaire.cpp.o" \
+"CMakeFiles/UTCalculateur.dir/src/operateur_unaire.cpp.o" \
 "CMakeFiles/UTCalculateur.dir/src/pile.cpp.o" \
 "CMakeFiles/UTCalculateur.dir/src/qcalculateur.cpp.o" \
 "CMakeFiles/UTCalculateur.dir/src/qclavier.cpp.o" \
@@ -370,7 +420,9 @@ UTCalculateur: CMakeFiles/UTCalculateur.dir/src/litterale_entiere.cpp.o
 UTCalculateur: CMakeFiles/UTCalculateur.dir/src/litterale_rationnelle.cpp.o
 UTCalculateur: CMakeFiles/UTCalculateur.dir/src/litterale_reelle.cpp.o
 UTCalculateur: CMakeFiles/UTCalculateur.dir/src/main.cpp.o
-UTCalculateur: CMakeFiles/UTCalculateur.dir/src/operateur_numerique.cpp.o
+UTCalculateur: CMakeFiles/UTCalculateur.dir/src/operateur.cpp.o
+UTCalculateur: CMakeFiles/UTCalculateur.dir/src/operateur_binaire.cpp.o
+UTCalculateur: CMakeFiles/UTCalculateur.dir/src/operateur_unaire.cpp.o
 UTCalculateur: CMakeFiles/UTCalculateur.dir/src/pile.cpp.o
 UTCalculateur: CMakeFiles/UTCalculateur.dir/src/qcalculateur.cpp.o
 UTCalculateur: CMakeFiles/UTCalculateur.dir/src/qclavier.cpp.o
@@ -380,7 +432,7 @@ UTCalculateur: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/lib/libQt5Widgets.so.5.14
 UTCalculateur: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/lib/libQt5Gui.so.5.14.2
 UTCalculateur: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/lib/libQt5Core.so.5.14.2
 UTCalculateur: CMakeFiles/UTCalculateur.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/hoangkplog/Desktop/CPP_Project/UTCalculateur/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable UTCalculateur"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/hoangkplog/Desktop/CPP_Project/UTCalculateur/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX executable UTCalculateur"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/UTCalculateur.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -395,7 +447,9 @@ CMakeFiles/UTCalculateur.dir/requires: CMakeFiles/UTCalculateur.dir/src/litteral
 CMakeFiles/UTCalculateur.dir/requires: CMakeFiles/UTCalculateur.dir/src/litterale_rationnelle.cpp.o.requires
 CMakeFiles/UTCalculateur.dir/requires: CMakeFiles/UTCalculateur.dir/src/litterale_reelle.cpp.o.requires
 CMakeFiles/UTCalculateur.dir/requires: CMakeFiles/UTCalculateur.dir/src/main.cpp.o.requires
-CMakeFiles/UTCalculateur.dir/requires: CMakeFiles/UTCalculateur.dir/src/operateur_numerique.cpp.o.requires
+CMakeFiles/UTCalculateur.dir/requires: CMakeFiles/UTCalculateur.dir/src/operateur.cpp.o.requires
+CMakeFiles/UTCalculateur.dir/requires: CMakeFiles/UTCalculateur.dir/src/operateur_binaire.cpp.o.requires
+CMakeFiles/UTCalculateur.dir/requires: CMakeFiles/UTCalculateur.dir/src/operateur_unaire.cpp.o.requires
 CMakeFiles/UTCalculateur.dir/requires: CMakeFiles/UTCalculateur.dir/src/pile.cpp.o.requires
 CMakeFiles/UTCalculateur.dir/requires: CMakeFiles/UTCalculateur.dir/src/qcalculateur.cpp.o.requires
 CMakeFiles/UTCalculateur.dir/requires: CMakeFiles/UTCalculateur.dir/src/qclavier.cpp.o.requires

@@ -126,9 +126,23 @@ build CMakeFiles/UTCalculateur.dir/src/main.cpp.o: CXX_COMPILER__UTCalculateur .
   INCLUDES = -IUTCalculateur_autogen/include -I../include -I../src -isystem /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include -isystem /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets -isystem /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtGui -isystem /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore -isystem /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/./mkspecs/linux-g++
   OBJECT_DIR = CMakeFiles/UTCalculateur.dir
   OBJECT_FILE_DIR = CMakeFiles/UTCalculateur.dir/src
-build CMakeFiles/UTCalculateur.dir/src/operateur_numerique.cpp.o: CXX_COMPILER__UTCalculateur ../src/operateur_numerique.cpp || cmake_object_order_depends_target_UTCalculateur
+build CMakeFiles/UTCalculateur.dir/src/operateur.cpp.o: CXX_COMPILER__UTCalculateur ../src/operateur.cpp || cmake_object_order_depends_target_UTCalculateur
   DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
-  DEP_FILE = CMakeFiles/UTCalculateur.dir/src/operateur_numerique.cpp.o.d
+  DEP_FILE = CMakeFiles/UTCalculateur.dir/src/operateur.cpp.o.d
+  FLAGS = -g   -fPIC -std=c++1z
+  INCLUDES = -IUTCalculateur_autogen/include -I../include -I../src -isystem /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include -isystem /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets -isystem /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtGui -isystem /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore -isystem /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/./mkspecs/linux-g++
+  OBJECT_DIR = CMakeFiles/UTCalculateur.dir
+  OBJECT_FILE_DIR = CMakeFiles/UTCalculateur.dir/src
+build CMakeFiles/UTCalculateur.dir/src/operateur_binaire.cpp.o: CXX_COMPILER__UTCalculateur ../src/operateur_binaire.cpp || cmake_object_order_depends_target_UTCalculateur
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
+  DEP_FILE = CMakeFiles/UTCalculateur.dir/src/operateur_binaire.cpp.o.d
+  FLAGS = -g   -fPIC -std=c++1z
+  INCLUDES = -IUTCalculateur_autogen/include -I../include -I../src -isystem /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include -isystem /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets -isystem /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtGui -isystem /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore -isystem /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/./mkspecs/linux-g++
+  OBJECT_DIR = CMakeFiles/UTCalculateur.dir
+  OBJECT_FILE_DIR = CMakeFiles/UTCalculateur.dir/src
+build CMakeFiles/UTCalculateur.dir/src/operateur_unaire.cpp.o: CXX_COMPILER__UTCalculateur ../src/operateur_unaire.cpp || cmake_object_order_depends_target_UTCalculateur
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
+  DEP_FILE = CMakeFiles/UTCalculateur.dir/src/operateur_unaire.cpp.o.d
   FLAGS = -g   -fPIC -std=c++1z
   INCLUDES = -IUTCalculateur_autogen/include -I../include -I../src -isystem /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include -isystem /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets -isystem /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtGui -isystem /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore -isystem /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/./mkspecs/linux-g++
   OBJECT_DIR = CMakeFiles/UTCalculateur.dir
@@ -169,9 +183,8 @@ build CMakeFiles/UTCalculateur.dir/UTCalculateur_autogen/mocs_compilation.cpp.o:
 #############################################
 # Link the executable UTCalculateur
 
-build UTCalculateur: CXX_EXECUTABLE_LINKER__UTCalculateur CMakeFiles/UTCalculateur.dir/src/controleur.cpp.o CMakeFiles/UTCalculateur.dir/src/litterale.cpp.o CMakeFiles/UTCalculateur.dir/src/litterale_complexe.cpp.o CMakeFiles/UTCalculateur.dir/src/litterale_entiere.cpp.o CMakeFiles/UTCalculateur.dir/src/litterale_rationnelle.cpp.o CMakeFiles/UTCalculateur.dir/src/litterale_reelle.cpp.o CMakeFiles/UTCalculateur.dir/src/main.cpp.o CMakeFiles/UTCalculateur.dir/src/operateur_numerique.cpp.o CMakeFiles/UTCalculateur.dir/src/pile.cpp.o CMakeFiles/UTCalculateur.dir/src/qcalculateur.cpp.o CMakeFiles/UTCalculateur.dir/src/qclavier.cpp.o CMakeFiles/UTCalculateur.dir/UTCalculateur_autogen/mocs_compilation.cpp.o | /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/lib/libQt5Widgets.so.5.14.2 /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/lib/libQt5Gui.so.5.14.2 /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/lib/libQt5Core.so.5.14.2 || UTCalculateur_autogen
+build UTCalculateur: CXX_EXECUTABLE_LINKER__UTCalculateur CMakeFiles/UTCalculateur.dir/src/controleur.cpp.o CMakeFiles/UTCalculateur.dir/src/litterale.cpp.o CMakeFiles/UTCalculateur.dir/src/litterale_complexe.cpp.o CMakeFiles/UTCalculateur.dir/src/litterale_entiere.cpp.o CMakeFiles/UTCalculateur.dir/src/litterale_rationnelle.cpp.o CMakeFiles/UTCalculateur.dir/src/litterale_reelle.cpp.o CMakeFiles/UTCalculateur.dir/src/main.cpp.o CMakeFiles/UTCalculateur.dir/src/operateur.cpp.o CMakeFiles/UTCalculateur.dir/src/operateur_binaire.cpp.o CMakeFiles/UTCalculateur.dir/src/operateur_unaire.cpp.o CMakeFiles/UTCalculateur.dir/src/pile.cpp.o CMakeFiles/UTCalculateur.dir/src/qcalculateur.cpp.o CMakeFiles/UTCalculateur.dir/src/qclavier.cpp.o CMakeFiles/UTCalculateur.dir/UTCalculateur_autogen/mocs_compilation.cpp.o | /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/lib/libQt5Widgets.so.5.14.2 /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/lib/libQt5Gui.so.5.14.2 /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/lib/libQt5Core.so.5.14.2 || UTCalculateur_autogen
   FLAGS = -g
-  LINK_FLAGS = -rdynamic
   LINK_LIBRARIES = -Wl,-rpath,/home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/lib /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/lib/libQt5Widgets.so.5.14.2 /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/lib/libQt5Gui.so.5.14.2 /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/lib/libQt5Core.so.5.14.2
   OBJECT_DIR = CMakeFiles/UTCalculateur.dir
   POST_BUILD = :
@@ -198,11 +211,6 @@ build CMakeFiles/UTCalculateur_autogen UTCalculateur_autogen/mocs_compilation.cp
 # Folder targets.
 
 # =============================================================================
-# =============================================================================
-# Unknown Build Time Dependencies.
-# Tell Ninja that they may appear as side effects of build rules
-# otherwise ordered by order-only dependencies.
-
 # =============================================================================
 # Built-in targets
 

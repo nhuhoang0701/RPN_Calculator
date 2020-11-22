@@ -16,12 +16,13 @@ public:
     int getDen() const { return den_; }
 
     const QString affichage(QString f) const override;
-    bool isNull() const override { return num_ != 0; }
+    bool isNull() const override { return num_ == 0; }
     bool isPos() const override { return num_ * den_ > 0; }
     LitteraleNumerique *cloneOnHeap() const override;
     LitteraleNumerique *simplifier() override;
     // double getValeur() const { return double(num_) / den_; }
 
+    virtual LitteraleNumerique* puissance(LitteraleReelle& l) override;
     virtual LitteraleNumerique *convertToNumerique(TypeLitterale type) override;
     virtual LitteraleNombre *convertToComplexe() override;
 

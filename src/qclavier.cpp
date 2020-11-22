@@ -1,8 +1,9 @@
 #include <cmath>
 #include "qclavier.h"
 
-QClavier::QClavier(QCalculateur &calculateur) : calculateur_{calculateur},
-                                                sizeButtonPolicy_{QSizePolicy::Minimum, QSizePolicy::Minimum}
+QClavier::QClavier(QCalculateur &calculateur)
+    : calculateur_{calculateur},
+      sizeButtonPolicy_{QSizePolicy::Minimum, QSizePolicy::Minimum}
 
 {
     mainLayout_ = new QVBoxLayout{};
@@ -38,7 +39,7 @@ void QClavier::creerSimpleClavier()
 
     for (size_t i = 0; i <= 9; i++)
     {
-        creerButton(QString::number(i), SLOT(digitClicked()));
+        creerButton(QString::number(i), SLOT(addTextClicked()));
     }
     creerButton(tr("["), SLOT(addTextClicked()));
     creerButton(tr("]"), SLOT(addTextClicked()));
@@ -47,10 +48,10 @@ void QClavier::creerSimpleClavier()
 
     creerButton(tr("DEL"), SLOT(deleteClicked()));
 
-    creerButton(tr("+"), SLOT(simpleOperatorClicked()));
-    creerButton(tr("-"), SLOT(simpleOperatorClicked()));
-    creerButton(tr("*"), SLOT(simpleOperatorClicked()));
-    creerButton(tr("/"), SLOT(simpleOperatorClicked()));
+    creerButton(tr("+"), SLOT(autoOperatorClicked()));
+    creerButton(tr("-"), SLOT(autoOperatorClicked()));
+    creerButton(tr("*"), SLOT(autoOperatorClicked()));
+    creerButton(tr("/"), SLOT(autoOperatorClicked()));
 
     creerButton(tr("ENTREE"), SLOT(enterClicked()));
 
@@ -114,7 +115,7 @@ void QClavier::creerFonctionClavier()
                                 "ARCSIN", "ARCCOS", "ARCTAN", "SQRT", "POW", "EXP", "LN"};
     for (auto &fonction : fonctionList)
     {
-        creerButton(fonction, SLOT(unaryOperatorClicked()));
+        creerButton(fonction, SLOT(addTextClicked()));
     }
 
     for (size_t i = 0; i < fonctionList.size() - 2; i++)
@@ -144,7 +145,7 @@ void QClavier::creerLogiqueClavier()
     QStringList logiqueList = {"==", "<", ">", "!=", "=<", ">=", "AND", "OR", "NOT"};
     for (auto &logique : logiqueList)
     {
-        creerButton(logique, SLOT(unaryOperatorClicked()));
+        creerButton(logique, SLOT(addTextClicked()));
     }
 
     for (size_t i = 0; i < logiqueList.size(); i++)
@@ -167,7 +168,7 @@ void QClavier::creerEvaluationClavier()
     QStringList evaluationList = {"EVAL", "STO", "FORGET"};
     for (auto &evaluation : evaluationList)
     {
-        creerButton(evaluation, SLOT(unaryOperatorClicked()));
+        creerButton(evaluation, SLOT(addTextClicked()));
     }
 
     for (size_t i = 0; i < evaluationList.size(); i++)
@@ -190,7 +191,7 @@ void QClavier::creerCondtionClavier()
     QStringList conditionList = {"IFT", "IFTE", "WHILE"};
     for (auto &condtion : conditionList)
     {
-        creerButton(condtion, SLOT(unaryOperatorClicked()));
+        creerButton(condtion, SLOT(addTextClicked()));
     }
 
     for (size_t i = 0; i < conditionList.size(); i++)
@@ -211,14 +212,6 @@ void QClavier::creerButton(const QString &text, const char *member)
     connect(keyboardMap_[text], SIGNAL(clicked()), this, member);
 }
 
-void QClavier::digitClicked()
-{
-    auto clickedButton = qobject_cast<QPushButton *>(sender());
-    int digitValue = clickedButton->text().toInt();
-    QLineEdit &commandeBar = calculateur_.getCommandBar();
-    commandeBar.setText(commandeBar.text() + QString::number(digitValue));
-}
-
 void QClavier::deleteClicked()
 {
     QLineEdit &commandeBar = calculateur_.getCommandBar();
@@ -229,12 +222,12 @@ void QClavier::deleteClicked()
     }
 }
 
-void QClavier::simpleOperatorClicked()
+void QClavier::autoOperatorClicked()
 {
     try
     {
         auto clickedButton = qobject_cast<QPushButton *>(sender());
-        calculerOperateurSimple(clickedButton->text());
+        calculerAutoOperateur(clickedButton->text());
     }
     catch (const CalculateurException &e)
     {
@@ -242,35 +235,7 @@ void QClavier::simpleOperatorClicked()
     }
 }
 
-void QClavier::unaryOperatorClicked()
-{
-    QLineEdit &commandeBar = calculateur_.getCommandBar();
-    auto clickedButton = qobject_cast<QPushButton *>(sender());
-    QString clickedOperator = clickedButton->text();
-    double operand = commandeBar.text().toDouble();
-    double result = 0.0;
-    if (clickedOperator == "SQRT")
-    {
-        if (operand < 0.0)
-        {
-            calculateur_.setMessage("Impossible de faire SQRT sur une valeur negative, " +
-                                    QString::number(operand) + " passé!");
-            return;
-        }
-        result = std::sqrt(operand);
-    }
-    else if (clickedOperator == "CARRE")
-    {
-        result = std::pow(operand, 2.0);
-    }
-    else if (clickedOperator == "NEG")
-    {
-        result = -operand;
-    }
-    commandeBar.setText(QString::number(result));
-}
-
-bool QClavier::calculerOperateurSimple(QString op)
+bool QClavier::calculerAutoOperateur(QString op)
 {
     QLineEdit &commandeBar = calculateur_.getCommandBar();
     QString result = calculateur_.getControleur().commande(commandeBar.text() + " " + op);
@@ -296,7 +261,7 @@ void QClavier::enterClicked()
 {
     try
     {
-        calculateur_.calculerOperateurSimple();
+        calculateur_.calculerAutoOperateur();
     }
     catch (const CalculateurException &e)
     {

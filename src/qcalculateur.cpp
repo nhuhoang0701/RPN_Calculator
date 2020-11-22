@@ -75,7 +75,7 @@ QCalculateur::QCalculateur()
     mainLayout_->addWidget(clavier_.get());
 }
 
-bool QCalculateur::calculerOperateurSimple(QString op)
+bool QCalculateur::calculerAutoOperateur(QString op)
 {
     QString result = controleur_.commande(commandeBar_->text() + " " + op);
     renderVuePile();
@@ -105,7 +105,7 @@ void QCalculateur::enterClicked()
 {
     try
     {
-        calculerOperateurSimple();
+        calculerAutoOperateur();
     }
     catch (const CalculateurException &e)
     {

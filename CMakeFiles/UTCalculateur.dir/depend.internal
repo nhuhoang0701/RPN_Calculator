@@ -229,7 +229,7 @@ CMakeFiles/UTCalculateur.dir/src/controleur.cpp.o
  include/litterale_rationnelle.h
  include/litterale_reelle.h
  include/operateur.h
- include/operateur_numerique.h
+ include/operateur_binaire.h
  include/pile.h
 CMakeFiles/UTCalculateur.dir/src/litterale.cpp.o
  /home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/litterale.cpp
@@ -337,6 +337,7 @@ CMakeFiles/UTCalculateur.dir/src/litterale_entiere.cpp.o
  /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qtcore-config.h
  /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qtypeinfo.h
  /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qversiontagging.h
+ include/exceptions.h
  include/litterale.h
  include/litterale_complexe.h
  include/litterale_entiere.h
@@ -588,12 +589,12 @@ CMakeFiles/UTCalculateur.dir/src/main.cpp.o
  include/litterale_rationnelle.h
  include/litterale_reelle.h
  include/operateur.h
- include/operateur_numerique.h
+ include/operateur_binaire.h
  include/pile.h
  include/qcalculateur.h
  include/qclavier.h
-CMakeFiles/UTCalculateur.dir/src/operateur_numerique.cpp.o
- /home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/operateur_numerique.cpp
+CMakeFiles/UTCalculateur.dir/src/operateur.cpp.o
+ /home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/operateur.cpp
  /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/QString
  /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qarraydata.h
  /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qatomic.h
@@ -630,7 +631,88 @@ CMakeFiles/UTCalculateur.dir/src/operateur_numerique.cpp.o
  include/litterale.h
  include/litterale_complexe.h
  include/operateur.h
- include/operateur_numerique.h
+ include/operateur_binaire.h
+ include/operateur_unaire.h
+CMakeFiles/UTCalculateur.dir/src/operateur_binaire.cpp.o
+ /home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/operateur_binaire.cpp
+ /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/QString
+ /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qarraydata.h
+ /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qatomic.h
+ /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qatomic_bootstrap.h
+ /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qatomic_cxx11.h
+ /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qatomic_msvc.h
+ /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qbasicatomic.h
+ /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qbytearray.h
+ /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qchar.h
+ /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qcompilerdetection.h
+ /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qconfig-bootstrapped.h
+ /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qconfig.h
+ /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qflags.h
+ /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qgenericatomic.h
+ /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qglobal.h
+ /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qglobalstatic.h
+ /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qlogging.h
+ /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qmutex.h
+ /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qnamespace.h
+ /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qnumeric.h
+ /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qprocessordetection.h
+ /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qrefcount.h
+ /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qstring.h
+ /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qstringalgorithms.h
+ /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qstringbuilder.h
+ /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qstringliteral.h
+ /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qstringview.h
+ /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qsysinfo.h
+ /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qsystemdetection.h
+ /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qtcore-config.h
+ /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qtypeinfo.h
+ /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qversiontagging.h
+ include/exceptions.h
+ include/litterale.h
+ include/litterale_complexe.h
+ include/litterale_entiere.h
+ include/litterale_reelle.h
+ include/operateur.h
+ include/operateur_binaire.h
+CMakeFiles/UTCalculateur.dir/src/operateur_unaire.cpp.o
+ /home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/operateur_unaire.cpp
+ /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/QString
+ /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qarraydata.h
+ /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qatomic.h
+ /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qatomic_bootstrap.h
+ /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qatomic_cxx11.h
+ /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qatomic_msvc.h
+ /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qbasicatomic.h
+ /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qbytearray.h
+ /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qchar.h
+ /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qcompilerdetection.h
+ /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qconfig-bootstrapped.h
+ /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qconfig.h
+ /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qflags.h
+ /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qgenericatomic.h
+ /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qglobal.h
+ /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qglobalstatic.h
+ /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qlogging.h
+ /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qmutex.h
+ /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qnamespace.h
+ /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qnumeric.h
+ /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qprocessordetection.h
+ /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qrefcount.h
+ /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qstring.h
+ /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qstringalgorithms.h
+ /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qstringbuilder.h
+ /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qstringliteral.h
+ /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qstringview.h
+ /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qsysinfo.h
+ /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qsystemdetection.h
+ /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qtcore-config.h
+ /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qtypeinfo.h
+ /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qversiontagging.h
+ include/exceptions.h
+ include/litterale.h
+ include/litterale_complexe.h
+ include/operateur.h
+ include/operateur_unaire.h
 CMakeFiles/UTCalculateur.dir/src/pile.cpp.o
  /home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/pile.cpp
  /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/QString

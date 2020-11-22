@@ -14,16 +14,17 @@ public:
     LitteraleNumerique *cloneOnHeap() const override;
     const QString affichage(QString f) const override { return f.append(QString::number(valeur_)); }
     LitteraleNumerique *simplifier() override { return this; }
-    bool isNull() const override { return valeur_ != 0; }
+    bool isNull() const override { return valeur_ == 0; }
     bool isPos() const override { return valeur_ > 0; }
     double getValeur() const { return valeur_; }
 
+    virtual LitteraleNumerique *puissance(LitteraleReelle &l) override;
     virtual LitteraleNumerique *convertToNumerique(TypeLitterale type) override;
     virtual LitteraleNombre *convertToComplexe() override;
 
     LitteraleNombre *operator+(LitteraleNombre &l) override;
     LitteraleNombre *operator-(LitteraleNombre &l) override;
-    LitteraleNombre *operator*(LitteraleNombre &l)override;
+    LitteraleNombre *operator*(LitteraleNombre &l) override;
     LitteraleNombre *operator/(LitteraleNombre &l) override;
 };
 

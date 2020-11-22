@@ -41,12 +41,11 @@ public:
     Pile &getPile() { return *litteraleAffiche_; }
 
     QString commande(const QString &c);
-    bool estOperateurNumerique(const QString &s);
+    bool estOperateur(const QString &s);
     TypeLitterale estLitterale(const QString &s);
     bool estLitteraleAtome(const QString &s);
     // QList<Operateur *> FactoryMethod(QString str);
     Litterale *creerLitterale(QString str, TypeLitterale type);
-    Operateur *creerOperateur(QString str);
 
     // Memento &saveEtatToMemento(Pile &p) { return *(new Memento(p)); }
     void save();

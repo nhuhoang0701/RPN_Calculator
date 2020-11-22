@@ -5,18 +5,6 @@
 #include <QString>
 
 class LitteraleNombre;
-/*
-** Litterale classe
-*/
-class Litterale
-{
-public:
-    virtual ~Litterale() {}
-    virtual const QString affichage(QString f = "") const = 0;
-    virtual bool isNull() const = 0;
-    virtual LitteraleNombre *evaluer() = 0;
-    virtual LitteraleNombre *cloneOnHeap() const = 0;
-};
 
 enum class TypeLitterale
 {
@@ -29,7 +17,25 @@ enum class TypeLitterale
     NONE,
 };
 
+/*
+** Litterale classe
+*/
+class Litterale
+{
+public:
+    virtual ~Litterale() {}
+    virtual const QString affichage(QString f = "") const = 0;
+    virtual TypeLitterale getType() const { return typeLitterale_; }
+    virtual bool isNull() const = 0;
+    virtual LitteraleNombre *evaluer() = 0;
+    virtual LitteraleNombre *cloneOnHeap() const = 0;
+
+protected:
+    TypeLitterale typeLitterale_;
+};
+
 class LitteraleNumerique;
+class LitteraleReelle;
 /*
 ** LitteraleNombre classe
 */
@@ -37,21 +43,15 @@ class LitteraleNombre : public Litterale
 {
 public:
     virtual bool isPos() const = 0;
-
-    virtual TypeLitterale getType() const { return typeLitterale_; }
     virtual LitteraleNombre *evaluer() override { return this; }
-    virtual LitteraleNombre *cloneOnHeap() const = 0;
     virtual LitteraleNombre *simplifier() = 0;
-
+    virtual LitteraleNombre *puissance(LitteraleReelle& l) = 0;
     virtual LitteraleNombre *convertToComplexe() = 0;
 
     virtual LitteraleNombre *operator+(LitteraleNombre &l) = 0;
     virtual LitteraleNombre *operator-(LitteraleNombre &l) = 0;
     virtual LitteraleNombre *operator*(LitteraleNombre &l) = 0;
     virtual LitteraleNombre *operator/(LitteraleNombre &l) = 0;
-
-protected:
-    TypeLitterale typeLitterale_;
 };
 
 #include "litterale_complexe.h"

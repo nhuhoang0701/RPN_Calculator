@@ -1,4 +1,5 @@
 #include <iostream>
+#include <complex>
 
 #include "litterale_complexe.h"
 
@@ -20,6 +21,10 @@ LitteraleNombre *LitteraleComplexe::cloneOnHeap() const
     LitteraleNombre *re = partRe_->cloneOnHeap();
     LitteraleNombre *im = partIm_->cloneOnHeap();
     return new LitteraleComplexe{re, im};
+}
+
+LitteraleNombre *LitteraleComplexe::puissance(LitteraleReelle &l)
+{
 }
 
 const QString LitteraleComplexe::affichage(QString f) const

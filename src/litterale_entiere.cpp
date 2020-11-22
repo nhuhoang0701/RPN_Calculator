@@ -1,3 +1,6 @@
+#include <iostream>
+#include <cmath>
+#include "exceptions.h"
 #include "litterale_entiere.h"
 #include "litterale_rationnelle.h"
 #include "litterale_reelle.h"
@@ -11,6 +14,16 @@ LitteraleEntier::LitteraleEntier(int valeur) : valeur_{valeur}
 LitteraleNumerique *LitteraleEntier::cloneOnHeap() const
 {
     return new LitteraleEntier(valeur_);
+}
+
+LitteraleNumerique *LitteraleEntier::puissance(LitteraleReelle &l)
+{
+    double valeur = std::pow(valeur_, l.getValeur());
+    if (valeur == std::floor(valeur))
+    {
+        return new LitteraleEntier{static_cast<int>(std::pow(valeur_, l.getValeur()))};
+    }
+    return new LitteraleReelle{valeur};
 }
 
 LitteraleNumerique *LitteraleEntier::convertToNumerique(TypeLitterale type)
@@ -70,6 +83,10 @@ LitteraleNombre *LitteraleEntier::operator/(LitteraleNombre &l)
         return LitteraleNumerique::operator/(l);
     }
     LitteraleEntier &l_cast = dynamic_cast<LitteraleEntier &>(l);
+    if (l_cast.isNull())
+    {
+        throw CalculateurException{"Impossible de divider à 0!"};
+    }
     if (valeur_ % l_cast.valeur_ == 0)
     {
         return new LitteraleEntier{valeur_ / l_cast.valeur_};

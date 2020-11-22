@@ -8,7 +8,7 @@
 #include "litterale_reelle.h"
 #include "litterale_complexe.h"
 #include "operateur.h"
-#include "operateur_numerique.h"
+#include "operateur_binaire.h"
 #include "qcalculateur.h"
 #include "pile.h"
 
@@ -21,6 +21,7 @@ int main(int argc, char *argv[])
     LitteraleNombre *r2 = new LitteraleReelle{123.34};
     LitteraleNombre *r3 = new LitteraleEntier{34};
     LitteraleNombre *r4 = new LitteraleRationnelle{12, 34};
+    LitteraleEntier* r5 = new LitteraleEntier{4};
     LitteraleNombre *c1 = new LitteraleComplexe{r1->cloneOnHeap(), r2->cloneOnHeap()};
     LitteraleNombre *c2 = new LitteraleComplexe{r3->cloneOnHeap(), r4->cloneOnHeap()};
     Pile p = Pile{};
@@ -31,14 +32,15 @@ int main(int argc, char *argv[])
     PileIterator pitr = PileIterator{&p};
     for (auto itr = pitr.begin(); itr != pitr.end(); itr++)
     {
-    //    std::cout << (*itr)->affichage().toStdString() << '\n';
+        //    std::cout << (*itr)->affichage().toStdString() << '\n';
     }
     // p.affichage();
     // std::cout << r3->affichage().toStdString() << '\n';
     // std::cout << (*r2 / *r2)->affichage().toStdString() << '\n';
     // std::cout << (*r3 - *r4)->affichage().toStdString() << '\n';
     // std::cout << (*c2 - *c1)->affichage().toStdString() << '\n';
-    // Operateur *op = new Addition{};
+    Operateur *op = new Power{};
+    // std::cout << op->traitement(std::vector<Litterale *>{r1, r4})->affichage().toStdString() << '\n';
     try
     {
         // std::cout << op->traitement(std::vector<Litterale *>{r1, c2})->affichage().toStdString();

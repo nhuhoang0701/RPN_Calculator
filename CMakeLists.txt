@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.2)
+cmake_minimum_required(VERSION 3.5)
 # get_filename_component(ProjectId ${CMAKE_CURRENT_SOURCE_DIR} NAME)
 # string(REPLACE " " "_" ProjectId UTCalculateur)
 project(UTCalculateur VERSION 0.1.0)
@@ -18,7 +18,6 @@ include_directories(
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
-set(CMAKE_PREFIX_PATH "/home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/")
 SET(QT_USE_QTMULTIMEDIA TRUE)
 
 if(CMAKE_VERSION VERSION_LESS "3.7.0")

@@ -11,6 +11,16 @@ Pile::~Pile()
     litteralePile_.clear();
 }
 
+Pile *Pile::cloneOnHeap()
+{
+    Pile* pileCopy = new Pile{};
+    for (auto itr = litteralePile_.begin(); itr != litteralePile_.end(); itr++)
+    {
+        pileCopy->litteralePile_.push_back((*itr)->cloneOnHeap());
+    }
+    return pileCopy;
+}
+
 Litterale &Pile::top() const
 {
     if (litteralePile_.size() == 0)

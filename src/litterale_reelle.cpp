@@ -15,7 +15,7 @@ LitteraleReelle::LitteraleReelle(int entier, double decimal)
 LitteraleReelle::LitteraleReelle(double valeur) : valeur_{valeur}
 {
     typeLitterale_ = TypeLitterale::REEL;
-    auto pair = getRelleDivide(valeur);
+    auto pair = getIntDecimal(valeur);
     entier_ = pair.first;
     decimal_ = pair.second;
 }
@@ -44,7 +44,12 @@ LitteraleNumerique *LitteraleReelle::cloneOnHeap() const
     return new LitteraleReelle{entier_, decimal_};
 }
 
-std::pair<int, double> LitteraleReelle::getRelleDivide(double valeur)
+LitteraleNumerique *LitteraleReelle::puissance(LitteraleReelle &l)
+{
+    return new LitteraleReelle{std::pow(valeur_, l.valeur_)};
+}
+
+std::pair<int, double> LitteraleReelle::getIntDecimal(double valeur)
 {
     bool isPos = (valeur >= 0 ? true : false);
 
@@ -63,7 +68,7 @@ LitteraleNombre *LitteraleReelle::operator+(LitteraleNombre &l)
         return LitteraleNumerique::operator+(l);
     }
     LitteraleReelle &l_cast = dynamic_cast<LitteraleReelle &>(l);
-    auto pairDivide = getRelleDivide(valeur_ + l_cast.getValeur());
+    auto pairDivide = getIntDecimal(valeur_ + l_cast.getValeur());
     return new LitteraleReelle{pairDivide.first, pairDivide.second};
 }
 
@@ -74,7 +79,7 @@ LitteraleNombre *LitteraleReelle::operator-(LitteraleNombre &l)
         return LitteraleNumerique::operator-(l);
     }
     LitteraleReelle &l_cast = dynamic_cast<LitteraleReelle &>(l);
-    auto pairDivide = getRelleDivide(valeur_ - l_cast.getValeur());
+    auto pairDivide = getIntDecimal(valeur_ - l_cast.getValeur());
     return new LitteraleReelle{pairDivide.first, pairDivide.second};
 }
 
@@ -85,7 +90,7 @@ LitteraleNombre *LitteraleReelle::operator*(LitteraleNombre &l)
         return LitteraleNumerique::operator*(l);
     }
     LitteraleReelle &l_cast = dynamic_cast<LitteraleReelle &>(l);
-    auto pairDivide = getRelleDivide(valeur_ * l_cast.getValeur());
+    auto pairDivide = getIntDecimal(valeur_ * l_cast.getValeur());
     return new LitteraleReelle{pairDivide.first, pairDivide.second};
 }
 
@@ -96,6 +101,10 @@ LitteraleNombre *LitteraleReelle::operator/(LitteraleNombre &l)
         return LitteraleNumerique::operator/(l);
     }
     LitteraleReelle &l_cast = dynamic_cast<LitteraleReelle &>(l);
-    auto pairDivide = getRelleDivide(valeur_ / l_cast.getValeur());
+    if (l_cast.isNull())
+    {
+        throw CalculateurException{"Impossible de divider à 0!"};
+    }
+    auto pairDivide = getIntDecimal(valeur_ / l_cast.getValeur());
     return new LitteraleReelle{pairDivide.first, pairDivide.second};
 }

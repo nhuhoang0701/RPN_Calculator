@@ -13,7 +13,7 @@
             "linux": {
                 "MIMode": "gdb",
                 "miDebuggerPath": "gdb",
-                "program": "${workspaceFolder}/output/main"
+                "program": "${workspaceFolder}/UTCalculateur"
             },
             "osx": {
                 "MIMode": "lldb",

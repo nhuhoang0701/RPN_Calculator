@@ -8,7 +8,7 @@
 #include "litterale_entiere.h"
 #include "litterale_rationnelle.h"
 #include "litterale_reelle.h"
-#include "operateur_numerique.h"
+#include "operateur_binaire.h"
 
 Controleur &Controleur::getInstance()
 {
@@ -16,7 +16,7 @@ Controleur &Controleur::getInstance()
     return instance_;
 }
 
-bool Controleur::estOperateurNumerique(const QString &s)
+bool Controleur::estOperateur(const QString &s)
 {
     if (s == "+" || s == "-" || s == "*" || s == "/")
     {
@@ -65,29 +65,11 @@ Litterale *Controleur::creerLitterale(QString str, TypeLitterale type)
     }
 }
 
-Operateur *Controleur::creerOperateur(QString str)
-{
-    //todo: Use operator factory
-    if (str == "+")
-    {
-        return new Addition{};
-    }
-    else if (str == "-")
-    {
-        return new Soustraction{};
-    }
-    else if (str == "*")
-    {
-        return new Multiplication{};
-    }
-    else if (str == "/")
-    {
-        return new Division{};
-    }
-}
 
 QString Controleur::commande(const QString &c)
 {
+    std::unique_ptr<Pile> pileCopy{litteraleAffiche_->cloneOnHeap()};
+
     QRegExp regex{"(\\ )"};
     QStringList listOperande = c.split(regex, QString::SkipEmptyParts);
     for (size_t i = 0; i < listOperande.size(); i++)
@@ -98,29 +80,29 @@ QString Controleur::commande(const QString &c)
             // std::cout << "Littrale" << '\n';
             litteraleAffiche_->push(*creerLitterale(listOperande[i], type));
         }
-        else if (estOperateurNumerique(listOperande[i]))
+        else
         {
             // std::cout << "Operateur" << '\n';
-            Operateur *op = creerOperateur(listOperande[i]);
-            int arite = op->getArite();
-            std::vector<Litterale *> arguments{};
-            while (arite-- != 0 && !litteraleAffiche_->estVide())
+            Operateur *op = Operateur::getOperateur(listOperande[i]);
+            if (op != nullptr)
             {
-                arguments.insert(arguments.begin(), litteraleAffiche_->top().cloneOnHeap());
-                litteraleAffiche_->pop();
-            }
-            try
-            {
-                LitteraleNombre *lit = op->traitement(arguments);
-                litteraleAffiche_->push(*lit);
-            }
-            catch (const CalculateurException &e)
-            {
-                for (auto p : arguments)
+                int arite = op->getArite();
+                std::vector<Litterale *> arguments{};
+                while (arite-- != 0 && !litteraleAffiche_->estVide())
                 {
-                    litteraleAffiche_->push(*p);
+                    arguments.insert(arguments.begin(), litteraleAffiche_->top().cloneOnHeap());
+                    litteraleAffiche_->pop();
                 }
-                throw;
+                try
+                {
+                    LitteraleNombre *lit = op->traitement(arguments);
+                    litteraleAffiche_->push(*lit);
+                }
+                catch (const CalculateurException &e)
+                {
+                    litteraleAffiche_ = std::move(pileCopy);
+                    throw;
+                }
             }
         }
     }

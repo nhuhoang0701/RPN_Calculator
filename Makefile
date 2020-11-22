@@ -374,32 +374,86 @@ src/main.cpp.s:
 	$(MAKE) -f CMakeFiles/UTCalculateur.dir/build.make CMakeFiles/UTCalculateur.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
-src/operateur_numerique.o: src/operateur_numerique.cpp.o
+src/operateur.o: src/operateur.cpp.o
 
-.PHONY : src/operateur_numerique.o
+.PHONY : src/operateur.o
 
 # target to build an object file
-src/operateur_numerique.cpp.o:
-	$(MAKE) -f CMakeFiles/UTCalculateur.dir/build.make CMakeFiles/UTCalculateur.dir/src/operateur_numerique.cpp.o
-.PHONY : src/operateur_numerique.cpp.o
+src/operateur.cpp.o:
+	$(MAKE) -f CMakeFiles/UTCalculateur.dir/build.make CMakeFiles/UTCalculateur.dir/src/operateur.cpp.o
+.PHONY : src/operateur.cpp.o
 
-src/operateur_numerique.i: src/operateur_numerique.cpp.i
+src/operateur.i: src/operateur.cpp.i
 
-.PHONY : src/operateur_numerique.i
+.PHONY : src/operateur.i
 
 # target to preprocess a source file
-src/operateur_numerique.cpp.i:
-	$(MAKE) -f CMakeFiles/UTCalculateur.dir/build.make CMakeFiles/UTCalculateur.dir/src/operateur_numerique.cpp.i
-.PHONY : src/operateur_numerique.cpp.i
+src/operateur.cpp.i:
+	$(MAKE) -f CMakeFiles/UTCalculateur.dir/build.make CMakeFiles/UTCalculateur.dir/src/operateur.cpp.i
+.PHONY : src/operateur.cpp.i
 
-src/operateur_numerique.s: src/operateur_numerique.cpp.s
+src/operateur.s: src/operateur.cpp.s
 
-.PHONY : src/operateur_numerique.s
+.PHONY : src/operateur.s
 
 # target to generate assembly for a file
-src/operateur_numerique.cpp.s:
-	$(MAKE) -f CMakeFiles/UTCalculateur.dir/build.make CMakeFiles/UTCalculateur.dir/src/operateur_numerique.cpp.s
-.PHONY : src/operateur_numerique.cpp.s
+src/operateur.cpp.s:
+	$(MAKE) -f CMakeFiles/UTCalculateur.dir/build.make CMakeFiles/UTCalculateur.dir/src/operateur.cpp.s
+.PHONY : src/operateur.cpp.s
+
+src/operateur_binaire.o: src/operateur_binaire.cpp.o
+
+.PHONY : src/operateur_binaire.o
+
+# target to build an object file
+src/operateur_binaire.cpp.o:
+	$(MAKE) -f CMakeFiles/UTCalculateur.dir/build.make CMakeFiles/UTCalculateur.dir/src/operateur_binaire.cpp.o
+.PHONY : src/operateur_binaire.cpp.o
+
+src/operateur_binaire.i: src/operateur_binaire.cpp.i
+
+.PHONY : src/operateur_binaire.i
+
+# target to preprocess a source file
+src/operateur_binaire.cpp.i:
+	$(MAKE) -f CMakeFiles/UTCalculateur.dir/build.make CMakeFiles/UTCalculateur.dir/src/operateur_binaire.cpp.i
+.PHONY : src/operateur_binaire.cpp.i
+
+src/operateur_binaire.s: src/operateur_binaire.cpp.s
+
+.PHONY : src/operateur_binaire.s
+
+# target to generate assembly for a file
+src/operateur_binaire.cpp.s:
+	$(MAKE) -f CMakeFiles/UTCalculateur.dir/build.make CMakeFiles/UTCalculateur.dir/src/operateur_binaire.cpp.s
+.PHONY : src/operateur_binaire.cpp.s
+
+src/operateur_unaire.o: src/operateur_unaire.cpp.o
+
+.PHONY : src/operateur_unaire.o
+
+# target to build an object file
+src/operateur_unaire.cpp.o:
+	$(MAKE) -f CMakeFiles/UTCalculateur.dir/build.make CMakeFiles/UTCalculateur.dir/src/operateur_unaire.cpp.o
+.PHONY : src/operateur_unaire.cpp.o
+
+src/operateur_unaire.i: src/operateur_unaire.cpp.i
+
+.PHONY : src/operateur_unaire.i
+
+# target to preprocess a source file
+src/operateur_unaire.cpp.i:
+	$(MAKE) -f CMakeFiles/UTCalculateur.dir/build.make CMakeFiles/UTCalculateur.dir/src/operateur_unaire.cpp.i
+.PHONY : src/operateur_unaire.cpp.i
+
+src/operateur_unaire.s: src/operateur_unaire.cpp.s
+
+.PHONY : src/operateur_unaire.s
+
+# target to generate assembly for a file
+src/operateur_unaire.cpp.s:
+	$(MAKE) -f CMakeFiles/UTCalculateur.dir/build.make CMakeFiles/UTCalculateur.dir/src/operateur_unaire.cpp.s
+.PHONY : src/operateur_unaire.cpp.s
 
 src/pile.o: src/pile.cpp.o
 
@@ -518,9 +572,15 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
-	@echo "... src/operateur_numerique.o"
-	@echo "... src/operateur_numerique.i"
-	@echo "... src/operateur_numerique.s"
+	@echo "... src/operateur.o"
+	@echo "... src/operateur.i"
+	@echo "... src/operateur.s"
+	@echo "... src/operateur_binaire.o"
+	@echo "... src/operateur_binaire.i"
+	@echo "... src/operateur_binaire.s"
+	@echo "... src/operateur_unaire.o"
+	@echo "... src/operateur_unaire.i"
+	@echo "... src/operateur_unaire.s"
 	@echo "... src/pile.o"
 	@echo "... src/pile.i"
 	@echo "... src/pile.s"
