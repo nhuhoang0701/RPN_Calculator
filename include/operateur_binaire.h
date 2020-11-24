@@ -15,6 +15,16 @@ public:
             }
         }
     }
+    void checkNul(const std::vector<Litterale *> &arguments)
+    {
+        for (auto &argument : arguments)
+        {
+            if (argument->evaluer() == nullptr)
+            {
+                throw CalculateurException("Littérale nul est passé, pas de littérale!");
+            }
+        }
+    }
 };
 
 /*
@@ -24,7 +34,7 @@ class Addition : public OperateurBinaire
 {
 public:
     Addition();
-    LitteraleNombre *traitement(const std::vector<Litterale *> &arguments) override;
+    LitteraleNombre *traitement(std::vector<Litterale *> &arguments) override;
 };
 
 /*
@@ -34,7 +44,7 @@ class Soustraction : public OperateurBinaire
 {
 public:
     Soustraction();
-    LitteraleNombre *traitement(const std::vector<Litterale *> &arguments) override;
+    LitteraleNombre *traitement(std::vector<Litterale *> &arguments) override;
 };
 
 /*
@@ -44,7 +54,7 @@ class Multiplication : public OperateurBinaire
 {
 public:
     Multiplication();
-    LitteraleNombre *traitement(const std::vector<Litterale *> &arguments) override;
+    LitteraleNombre *traitement(std::vector<Litterale *> &arguments) override;
 };
 
 /*
@@ -54,7 +64,7 @@ class Division : public OperateurBinaire
 {
 public:
     Division();
-    LitteraleNombre *traitement(const std::vector<Litterale *> &arguments) override;
+    LitteraleNombre *traitement(std::vector<Litterale *> &arguments) override;
 };
 
 /*
@@ -64,7 +74,7 @@ class Quotient : public OperateurBinaire
 {
 public:
     Quotient();
-    LitteraleNombre *traitement(const std::vector<Litterale *> &arguments) override;
+    LitteraleNombre *traitement(std::vector<Litterale *> &arguments) override;
 };
 
 /*
@@ -74,7 +84,7 @@ class Module : public OperateurBinaire
 {
 public:
     Module();
-    LitteraleNombre *traitement(const std::vector<Litterale *> &arguments) override;
+    LitteraleNombre *traitement(std::vector<Litterale *> &arguments) override;
 };
 
 /*
@@ -84,7 +94,7 @@ class Power : public OperateurBinaire
 {
 public:
     Power();
-    LitteraleNombre *traitement(const std::vector<Litterale *> &arguments) override;
+    LitteraleNombre *traitement(std::vector<Litterale *> &arguments) override;
 };
 
 /*
@@ -94,7 +104,7 @@ class Egalite : public OperateurBinaire
 {
 public:
     Egalite();
-    LitteraleNombre *traitement(const std::vector<Litterale *> &arguments) override;
+    LitteraleNombre *traitement(std::vector<Litterale *> &arguments) override;
 };
 
 /*
@@ -104,7 +114,7 @@ class Inegalite : public OperateurBinaire
 {
 public:
     Inegalite();
-    LitteraleNombre *traitement(const std::vector<Litterale *> &arguments) override;
+    LitteraleNombre *traitement(std::vector<Litterale *> &arguments) override;
 };
 
 /*
@@ -114,7 +124,7 @@ class InferieurOuEgal : public OperateurBinaire
 {
 public:
     InferieurOuEgal();
-    LitteraleNombre *traitement(const std::vector<Litterale *> &arguments) override;
+    LitteraleNombre *traitement(std::vector<Litterale *> &arguments) override;
 };
 
 /*
@@ -124,7 +134,7 @@ class SuperieurOuEgal : public OperateurBinaire
 {
 public:
     SuperieurOuEgal();
-    LitteraleNombre *traitement(const std::vector<Litterale *> &arguments) override;
+    LitteraleNombre *traitement(std::vector<Litterale *> &arguments) override;
 };
 
 /*
@@ -134,7 +144,7 @@ class Inferieur : public OperateurBinaire
 {
 public:
     Inferieur();
-    LitteraleNombre *traitement(const std::vector<Litterale *> &arguments) override;
+    LitteraleNombre *traitement(std::vector<Litterale *> &arguments) override;
 };
 
 /*
@@ -144,7 +154,7 @@ class Superieur : public OperateurBinaire
 {
 public:
     Superieur();
-    LitteraleNombre *traitement(const std::vector<Litterale *> &arguments) override;
+    LitteraleNombre *traitement(std::vector<Litterale *> &arguments) override;
 };
 
 /*
@@ -154,7 +164,7 @@ class And : public OperateurBinaire
 {
 public:
     And();
-    LitteraleNombre *traitement(const std::vector<Litterale *> &arguments) override;
+    LitteraleNombre *traitement(std::vector<Litterale *> &arguments) override;
 };
 
 /*
@@ -164,5 +174,5 @@ class Or : public OperateurBinaire
 {
 public:
     Or();
-    LitteraleNombre *traitement(const std::vector<Litterale *> &arguments) override;
+    LitteraleNombre *traitement(std::vector<Litterale *> &arguments) override;
 };

@@ -711,6 +711,7 @@ CMakeFiles/UTCalculateur.dir/src/operateur_unaire.cpp.o
  include/exceptions.h
  include/litterale.h
  include/litterale_complexe.h
+ include/litterale_entiere.h
  include/operateur.h
  include/operateur_unaire.h
 CMakeFiles/UTCalculateur.dir/src/pile.cpp.o

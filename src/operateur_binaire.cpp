@@ -3,6 +3,7 @@
 
 #include <QString>
 #include <iostream>
+
 #include "operateur_binaire.h"
 #include "litterale_entiere.h"
 #include "litterale_reelle.h"
@@ -10,9 +11,10 @@
 // Addition operateur
 Addition::Addition() : OperateurBinaire{"+"} {}
 
-LitteraleNombre *Addition::traitement(const std::vector<Litterale *> &arguments)
+LitteraleNombre *Addition::traitement(std::vector<Litterale *> &arguments)
 {
     checkArite(arguments.size());
+    checkNul(arguments);
     checkNotProgramme(arguments);
     return *arguments[0]->evaluer() + *arguments[1]->evaluer();
 }
@@ -20,9 +22,10 @@ LitteraleNombre *Addition::traitement(const std::vector<Litterale *> &arguments)
 // Soustraction operateur
 Soustraction::Soustraction() : OperateurBinaire{"-"} {}
 
-LitteraleNombre *Soustraction::traitement(const std::vector<Litterale *> &arguments)
+LitteraleNombre *Soustraction::traitement(std::vector<Litterale *> &arguments)
 {
     checkArite(arguments.size());
+    checkNul(arguments);
     checkNotProgramme(arguments);
     return *arguments[0]->evaluer() - *arguments[1]->evaluer();
 }
@@ -30,9 +33,10 @@ LitteraleNombre *Soustraction::traitement(const std::vector<Litterale *> &argume
 // Multiplication operateur
 Multiplication::Multiplication() : OperateurBinaire{"*"} {}
 
-LitteraleNombre *Multiplication::traitement(const std::vector<Litterale *> &arguments)
+LitteraleNombre *Multiplication::traitement(std::vector<Litterale *> &arguments)
 {
     checkArite(arguments.size());
+    checkNul(arguments);
     checkNotProgramme(arguments);
     return *arguments[0]->evaluer() * *arguments[1]->evaluer();
 }
@@ -40,9 +44,10 @@ LitteraleNombre *Multiplication::traitement(const std::vector<Litterale *> &argu
 // Division operateur
 Division::Division() : OperateurBinaire{"/"} {}
 
-LitteraleNombre *Division::traitement(const std::vector<Litterale *> &arguments)
+LitteraleNombre *Division::traitement(std::vector<Litterale *> &arguments)
 {
     checkArite(arguments.size());
+    checkNul(arguments);
     checkNotProgramme(arguments);
     return *arguments[0]->evaluer() / *arguments[1]->evaluer();
 }
@@ -50,9 +55,10 @@ LitteraleNombre *Division::traitement(const std::vector<Litterale *> &arguments)
 // Quotient operateur
 Quotient::Quotient() : OperateurBinaire{"DIV"} {}
 
-LitteraleNombre *Quotient::traitement(const std::vector<Litterale *> &arguments)
+LitteraleNombre *Quotient::traitement(std::vector<Litterale *> &arguments)
 {
     checkArite(arguments.size());
+    checkNul(arguments);
     checkNotProgramme(arguments);
     std::string argument0 = arguments[0]->affichage().toStdString();
     std::string argument1 = arguments[1]->affichage().toStdString();
@@ -71,7 +77,7 @@ LitteraleNombre *Quotient::traitement(const std::vector<Litterale *> &arguments)
     if (arguments[1]->getType() != TypeLitterale::ENTIER)
     {
         throw CalculateurException(
-            ("Operande DIV réaquis 2 entiers, opérande seconde " + argument0 + " est passé!").c_str());
+            ("Operande DIV réaquis 2 entiers, opérande seconde " + argument1 + " est passé!").c_str());
     }
     if (arguments[1]->evaluer()->affichage().toInt() == 0)
     {
@@ -84,9 +90,10 @@ LitteraleNombre *Quotient::traitement(const std::vector<Litterale *> &arguments)
 // Module opérateur
 Module::Module() : OperateurBinaire{"MOD"} {}
 
-LitteraleNombre *Module::traitement(const std::vector<Litterale *> &arguments)
+LitteraleNombre *Module::traitement(std::vector<Litterale *> &arguments)
 {
     checkArite(arguments.size());
+    checkNul(arguments);
     checkNotProgramme(arguments);
     std::string argument0 = arguments[0]->affichage().toStdString();
     std::string argument1 = arguments[1]->affichage().toStdString();
@@ -105,7 +112,7 @@ LitteraleNombre *Module::traitement(const std::vector<Litterale *> &arguments)
     if (arguments[1]->getType() != TypeLitterale::ENTIER)
     {
         throw CalculateurException(
-            ("Operande DIV réaquis 2 entiers, opérande seconde " + argument0 + " est passé!").c_str());
+            ("Operande DIV réaquis 2 entiers, opérande seconde " + argument1 + " est passé!").c_str());
     }
     if (arguments[1]->evaluer()->affichage().toInt() == 0)
     {
@@ -118,9 +125,10 @@ LitteraleNombre *Module::traitement(const std::vector<Litterale *> &arguments)
 // Pow opérateur
 Power::Power() : OperateurBinaire{"POW"} {}
 
-LitteraleNombre *Power::traitement(const std::vector<Litterale *> &arguments)
+LitteraleNombre *Power::traitement(std::vector<Litterale *> &arguments)
 {
     checkArite(arguments.size());
+    checkNul(arguments);
     checkNotProgramme(arguments);
     if (arguments[1]->evaluer()->getType() == TypeLitterale::COMPLEXE)
     {
@@ -135,9 +143,10 @@ LitteraleNombre *Power::traitement(const std::vector<Litterale *> &arguments)
 // Egalite opérateur
 Egalite::Egalite() : OperateurBinaire{"=="} {}
 
-LitteraleNombre *Egalite::traitement(const std::vector<Litterale *> &arguments)
+LitteraleNombre *Egalite::traitement(std::vector<Litterale *> &arguments)
 {
     checkArite(arguments.size());
+    checkNul(arguments);
     checkNotProgramme(arguments);
     LitteraleNombre *difference = *arguments[0]->evaluer() - *arguments[1]->evaluer();
     return (difference->isNull() ? new LitteraleEntier{1} : new LitteraleEntier{0});
@@ -146,9 +155,10 @@ LitteraleNombre *Egalite::traitement(const std::vector<Litterale *> &arguments)
 // Inégalité opérateur
 Inegalite::Inegalite() : OperateurBinaire{"!="} {}
 
-LitteraleNombre *Inegalite::traitement(const std::vector<Litterale *> &arguments)
+LitteraleNombre *Inegalite::traitement(std::vector<Litterale *> &arguments)
 {
     checkArite(arguments.size());
+    checkNul(arguments);
     checkNotProgramme(arguments);
     LitteraleNombre *difference = *arguments[0]->evaluer() - *arguments[1]->evaluer();
     return (difference->isNull() ? new LitteraleEntier{0} : new LitteraleEntier{1});
@@ -157,9 +167,10 @@ LitteraleNombre *Inegalite::traitement(const std::vector<Litterale *> &arguments
 // Inférieur ou égal opérateur
 InferieurOuEgal::InferieurOuEgal() : OperateurBinaire{"=<"} {}
 
-LitteraleNombre *InferieurOuEgal::traitement(const std::vector<Litterale *> &arguments)
+LitteraleNombre *InferieurOuEgal::traitement(std::vector<Litterale *> &arguments)
 {
     checkArite(arguments.size());
+    checkNul(arguments);
     checkNotProgramme(arguments);
     LitteraleNombre *difference = *arguments[0]->evaluer() - *arguments[1]->evaluer();
     return (difference->isPos() ? new LitteraleEntier{0} : new LitteraleEntier{1});
@@ -168,9 +179,10 @@ LitteraleNombre *InferieurOuEgal::traitement(const std::vector<Litterale *> &arg
 // Supérieur ou égal opérateur
 SuperieurOuEgal::SuperieurOuEgal() : OperateurBinaire{">="} {}
 
-LitteraleNombre *SuperieurOuEgal::traitement(const std::vector<Litterale *> &arguments)
+LitteraleNombre *SuperieurOuEgal::traitement(std::vector<Litterale *> &arguments)
 {
     checkArite(arguments.size());
+    checkNul(arguments);
     checkNotProgramme(arguments);
     LitteraleNombre *difference = *arguments[0]->evaluer() - *arguments[1]->evaluer();
     return (difference->isPos() || difference->isNull() ? new LitteraleEntier{1} : new LitteraleEntier{0});
@@ -179,9 +191,10 @@ LitteraleNombre *SuperieurOuEgal::traitement(const std::vector<Litterale *> &arg
 // Inférieur opérateur
 Inferieur::Inferieur() : OperateurBinaire{"<"} {}
 
-LitteraleNombre *Inferieur::traitement(const std::vector<Litterale *> &arguments)
+LitteraleNombre *Inferieur::traitement(std::vector<Litterale *> &arguments)
 {
     checkArite(arguments.size());
+    checkNul(arguments);
     checkNotProgramme(arguments);
     LitteraleNombre *difference = *arguments[0]->evaluer() - *arguments[1]->evaluer();
     return (difference->isPos() || difference->isNull() ? new LitteraleEntier{0} : new LitteraleEntier{1});
@@ -190,9 +203,10 @@ LitteraleNombre *Inferieur::traitement(const std::vector<Litterale *> &arguments
 // Supérieur opérateur
 Superieur::Superieur() : OperateurBinaire{">"} {}
 
-LitteraleNombre *Superieur::traitement(const std::vector<Litterale *> &arguments)
+LitteraleNombre *Superieur::traitement(std::vector<Litterale *> &arguments)
 {
     checkArite(arguments.size());
+    checkNul(arguments);
     checkNotProgramme(arguments);
     LitteraleNombre *difference = *arguments[0]->evaluer() - *arguments[1]->evaluer();
     return (difference->isPos() ? new LitteraleEntier{1} : new LitteraleEntier{0});
@@ -201,9 +215,10 @@ LitteraleNombre *Superieur::traitement(const std::vector<Litterale *> &arguments
 // AND opérateur
 And::And() : OperateurBinaire{"AND"} {}
 
-LitteraleNombre *And::traitement(const std::vector<Litterale *> &arguments)
+LitteraleNombre *And::traitement(std::vector<Litterale *> &arguments)
 {
     checkArite(arguments.size());
+    checkNul(arguments);
     checkNotProgramme(arguments);
     return (arguments[0]->isNull() || arguments[1]->isNull() ? new LitteraleEntier{0} : new LitteraleEntier{1});
 }
@@ -211,9 +226,10 @@ LitteraleNombre *And::traitement(const std::vector<Litterale *> &arguments)
 // Or opérateur
 Or::Or() : OperateurBinaire{"OR"} {}
 
-LitteraleNombre *Or::traitement(const std::vector<Litterale *> &arguments)
+LitteraleNombre *Or::traitement(std::vector<Litterale *> &arguments)
 {
     checkArite(arguments.size());
+    checkNul(arguments);
     checkNotProgramme(arguments);
     return (arguments[0]->isNull() && arguments[1]->isNull() ? new LitteraleEntier{0} : new LitteraleEntier{1});
 }

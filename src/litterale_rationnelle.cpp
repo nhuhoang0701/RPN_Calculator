@@ -12,7 +12,7 @@ LitteraleRationnelle::LitteraleRationnelle(int num, int den)
 {
     if (den == 0)
     {
-        throw CalculateurException("Den could not be 0!");
+        throw CalculateurException("Denominateur could not be 0!");
     }
     int gcd = std::__gcd(num_, den_);
     num_ /= gcd;

@@ -22,7 +22,7 @@ public:
     int getArite() { return arite_; }
     void checkArite(unsigned int taille);
 
-    virtual LitteraleNombre *traitement(const std::vector<Litterale *> &arguments) = 0;
+    virtual LitteraleNombre *traitement(std::vector<Litterale *> &arguments) = 0;
 
     static Operateur* getOperateur(const QString& symbol);
 };

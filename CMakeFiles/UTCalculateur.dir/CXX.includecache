@@ -283,6 +283,8 @@ litterale_reelle.h
 /home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/operateur_unaire.cpp
 operateur_unaire.h
 /home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/operateur_unaire.h
+litterale_entiere.h
+/home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/litterale_entiere.h
 
 /home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/pile.cpp
 pile.h

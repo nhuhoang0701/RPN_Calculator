@@ -27,7 +27,7 @@ ui_*.h
 *.qmlc
 *.jsc
 Makefile*
-*build-*
+build/
 
 # Qt unit tests
 target_wrapper.*
@@ -78,6 +78,7 @@ CMakeLists.txt.user*
 *.out
 *.app
 fpt_exam_qt5
+UTCalculateur
 
 *.AppImage
 AppDir

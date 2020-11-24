@@ -710,6 +710,7 @@ CMakeFiles/UTCalculateur.dir/src/operateur_unaire.cpp.o: /home/hoangkplog/Qt5.14
 CMakeFiles/UTCalculateur.dir/src/operateur_unaire.cpp.o: include/exceptions.h
 CMakeFiles/UTCalculateur.dir/src/operateur_unaire.cpp.o: include/litterale.h
 CMakeFiles/UTCalculateur.dir/src/operateur_unaire.cpp.o: include/litterale_complexe.h
+CMakeFiles/UTCalculateur.dir/src/operateur_unaire.cpp.o: include/litterale_entiere.h
 CMakeFiles/UTCalculateur.dir/src/operateur_unaire.cpp.o: include/operateur.h
 CMakeFiles/UTCalculateur.dir/src/operateur_unaire.cpp.o: include/operateur_unaire.h
 

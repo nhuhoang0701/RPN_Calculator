@@ -5,7 +5,6 @@
             "includePath": [
                 "${workspaceFolder}/**",
                 "${workspaceFolder}/include/**",
-                "/usr/include/x86_64-linux-gnu/qt5",
                 "/usr/include/x86_64-linux-gnu/qt5/QtWidgets",
                 "/usr/include/x86_64-linux-gnu/qt5/QtGui",
                 "/usr/include/x86_64-linux-gnu/qt5/QtCore",
@@ -16,9 +15,10 @@
                 "/usr/include/x86_64-linux-gnu/qt5/QtSql",
                 "/usr/include/x86_64-linux-gnu/qt5/QtNetwork",
                 "/usr/include/libdrm",
-                "/home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtWebChannel",
-                "/home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtWebEngineWidgets",
-                "/home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtWebEngineCore",
+                "/home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore",
+                // "/home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtWebChannel",
+                // "/home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtWebEngineWidgets",
+                // "/home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtWebEngineCore",
                 "/home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtPositioning"
             ],
             "defines": [],
@@ -27,7 +27,7 @@
             "cppStandard": "c++20",
             "intelliSenseMode": "gcc-x64",
             "configurationProvider": "ms-vscode.cmake-tools",
-            "compilerPath": "/usr/bin/g++",
+            "compilerPath": "/usr/bin/g++"
         }
     ],
     "version": 4

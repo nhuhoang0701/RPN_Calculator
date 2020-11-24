@@ -9,7 +9,7 @@
 void Operateur::checkArite(unsigned int taille)
 {
     std::string message = "Opérande " + symbol_.toStdString() + " demande " + std::to_string(arite_) +
-                          " arguments, " + std::to_string(taille) + " passé(s)!!";
+                          " arguments, " + std::to_string(taille) + " passé(s)!";
 
     if (arite_ != taille)
     {
@@ -39,7 +39,8 @@ Operateur *Operateur::getOperateur(const QString &symbol)
 
     if (operateurMap_.find(symbol) == operateurMap_.end())
     {
-        std::cout << "Not found" << '\n';
+        std::cout << "Not found operator" << '\n';
+        return nullptr;
     }
     return operateurMap_.at(symbol).get();
 }
