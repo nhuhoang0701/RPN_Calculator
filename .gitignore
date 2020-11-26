@@ -92,7 +92,6 @@ CMakeCache.txt
 *.exe
 *.out
 *.app
-fpt_exam_qt5
 UTCalculateur
 
 *.AppImage
