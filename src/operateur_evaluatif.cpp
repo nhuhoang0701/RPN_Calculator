@@ -7,6 +7,15 @@ IfThen::IfThen()
 
 void IfThen::traitement()
 {
+    Litterale *argument_2 = pile_->top().cloneOnHeapGeneral();
+    pile_->pop();
+    Litterale *argument_1 = pile_->top().cloneOnHeapGeneral();
+    pile_->pop();
+    if (argument_1->isNull())
+    {
+        return;
+    }
+    argument_2->evaluer();
 }
 
 // IFTE opérateur
@@ -15,6 +24,20 @@ IfThenElse::IfThenElse()
 
 void IfThenElse::traitement()
 {
+    Litterale *argument_3 = pile_->top().cloneOnHeapGeneral();
+    pile_->pop();
+    Litterale *argument_2 = pile_->top().cloneOnHeapGeneral();
+    pile_->pop();
+    Litterale *argument_1 = pile_->top().cloneOnHeapGeneral();
+    pile_->pop();
+    if (!argument_1->isNull())
+    {
+        argument_2->evaluer();
+    }
+    else
+    {
+        argument_3->evaluer();
+    }
 }
 
 // WHILE opérateur
@@ -39,21 +62,19 @@ void Evaluer::traitement()
                                        .c_str());
     }
     QString atome = top.affichage().mid(1, top.affichage().length() - 2);
-    std::cout << atome.toStdString() << '\n';
     auto pos = identifieurMap_->find(atome);
     if (pos != identifieurMap_->end())
     {
+        pile_->pop();
         if (pos->second->getLitterale()->getType() == TypeLitterale::PROGRAMME)
         {
-            pos->second->evaluer();
+            pos->second->getLitterale()->evaluer();
             return;
         }
-        pile_->pop();
         pile_->push(*(pos->second->evaluer()->cloneOnHeapGeneral()));
     }
     else
     {
-        std::cout << "Special" << '\n';
         throw CalculateurException((top.affichage().toStdString() + " n'est pas une variable!").c_str());
     }
 }
@@ -92,7 +113,6 @@ void Stocker::traitement()
         LitteraleExpression *variable = new LitteraleExpression{"'" + atome + "'"};
         variable->setLitterale(argument_1);
         (*identifieurMap_)[atome] = variable;
-        std::cout << argument_1->affichage().toStdString() << '\n';
     }
 }
 

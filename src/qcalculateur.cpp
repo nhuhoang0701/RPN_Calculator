@@ -47,6 +47,8 @@ QCalculateur::QCalculateur()
       commandeBar_{new QLineEdit{}}, clavier_{std::make_unique<QClavier>(*this)}
 {
     // setFixedSize(700, 400);
+    clavier_->setIdentifieurMap(controleur_.getIdentifieurMap());
+
     connect(this, SIGNAL(returnPressed()), this, SLOT(enterClicked()));
     setWindowTitle("UTCalculateur");
     mainWidget_ = new QWidget{};
@@ -109,6 +111,7 @@ void QCalculateur::renderVuePile()
     {
         vuePile_->item(rowCount_ - i, 0)->setText("");
     }
+    clavier_->updateUserClavier();
 }
 
 void QCalculateur::enterClicked()

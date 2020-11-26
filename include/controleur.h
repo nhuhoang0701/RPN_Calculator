@@ -2,9 +2,6 @@
 #define __CONTROLEUR__H__
 
 #include <QString>
-#include <QObject>
-#include <QList>
-#include <QRegExp>
 #include <QStringList>
 #include <map>
 #include <memory>
@@ -20,32 +17,22 @@ using identifieurMap_t = std::map<QString, LitteraleExpression *>;
 class Controleur
 {
     std::unique_ptr<Pile> litteraleAffiche_;
-    // operateurManager &opeMng;
-    // CareTaker careTaker;
-    unsigned int history_index;
     identifieurMap_t identifieurMap_;
+    unsigned int historyIndex_;
+    std::vector<Pile> pileHistory_;
+    bool redoable_;
 
-    Controleur() : litteraleAffiche_{std::make_unique<Pile>()} {}
-    // Controleur(operateurManager &o, Pile &v) : littAff(v), history_index(0)
-    // {
-    //     QRegExp rx("^[A-Z]([A-Z]|[0-9])*");
-    // for (operateurManager::iterator it = opeMng.begin(); it != opeMng.end(); ++it)
-    // {
-    //     if (rx.exactMatch((*it).getSymbol()))
-    //         identifieurMap_.insert((*it).getSymbol(), &(*it));
-    // }
-    // save();
-    // }
-    // Controleur(Controleur &c) : littAff(c.littAff), opeMng(c.opeMng), careTaker(), history_index(0) {}
+    Controleur() : litteraleAffiche_{std::make_unique<Pile>()}, historyIndex_{0}, redoable_{false} {}
 
 public:
     static Controleur &getInstance();
 
     Pile &getPile() { return *litteraleAffiche_; }
+    identifieurMap_t *getIdentifieurMap() { return &identifieurMap_; }
 
     void commande(const QString &c);
     bool estOperateurNumerique(const QString &s);
-    bool estOperateurAccessible(const QString& s);
+    bool estOperateurAccessible(const QString &s);
     bool checkOperateurPile(const QString &s);
     TypeLitterale estLitterale(const QString &s);
     bool estIdentifieur(const QString &s);

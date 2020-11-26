@@ -35,12 +35,6 @@ QtCore/qmetatype.h
 /home/hoangkplog/Desktop/CPP_Project/UTCalculateur/include/controleur.h
 QString
 -
-QObject
--
-QList
--
-QRegExp
--
 QStringList
 -
 map
@@ -61,13 +55,7 @@ pile.h
 /home/hoangkplog/Desktop/CPP_Project/UTCalculateur/include/pile.h
 
 /home/hoangkplog/Desktop/CPP_Project/UTCalculateur/include/exceptions.h
-memory
--
 stdexcept
--
-string
--
-iostream
 -
 
 /home/hoangkplog/Desktop/CPP_Project/UTCalculateur/include/litterale.h
@@ -177,15 +165,9 @@ qcalculateur.h
 /home/hoangkplog/Desktop/CPP_Project/UTCalculateur/include/qcalculateur.h
 
 /home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/controleur.cpp
-QRegExp
--
 QStringList
 -
 iostream
--
-cstring
--
-deque
 -
 stack
 -
@@ -379,18 +361,6 @@ cmath
 -
 qclavier.h
 /home/hoangkplog/Desktop/CPP_Project/UTCalculateur/src/qclavier.h
-
-/home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/QList
-qlist.h
-/home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qlist.h
-
-/home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/QObject
-qobject.h
-/home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qobject.h
-
-/home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/QRegExp
-qregexp.h
-/home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qregexp.h
 
 /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/QString
 qstring.h
@@ -1933,12 +1903,6 @@ QtGui/qevent.h
 include/controleur.h
 QString
 -
-QObject
--
-QList
--
-QRegExp
--
 QStringList
 -
 map
@@ -1959,13 +1923,7 @@ pile.h
 include/pile.h
 
 include/exceptions.h
-memory
--
 stdexcept
--
-string
--
-iostream
 -
 
 include/litterale.h

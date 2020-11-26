@@ -59,7 +59,7 @@ class LitteraleNombre : public Litterale
 {
 public:
     virtual bool isPos() const = 0;
-    virtual LitteraleNombre *evaluer() override { return this; }
+    virtual LitteraleNombre *evaluer() override { return cloneOnHeapNombre(); }
     virtual LitteraleNombre *simplifier() = 0;
     virtual LitteraleNombre *puissance(LitteraleReelle &l) = 0;
     virtual LitteraleNombre *convertToComplexe() = 0;

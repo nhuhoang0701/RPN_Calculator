@@ -20,7 +20,7 @@ private:
 public:
     friend PileIterator;
 
-    Pile(Pile &pile) = default;
+    Pile(const Pile &pile) = default;
     Pile() = default;
     Pile(Pile &&pile) = default;
     Pile &operator=(Pile &pile) = default;

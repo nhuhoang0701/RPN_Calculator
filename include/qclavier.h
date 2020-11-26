@@ -9,6 +9,8 @@
 #include <memory>
 #include "qcalculateur.h"
 
+using identifieurMap_t = std::map<QString, LitteraleExpression *>;
+
 class QCalculateur;
 
 class QClavier : public QWidget
@@ -17,6 +19,8 @@ private:
     Q_OBJECT
 
     QCalculateur &calculateur_;
+    identifieurMap_t *identifieurMap_;
+
     std::map<QString, QPushButton *> keyboardMap_;
     QSizePolicy sizeButtonPolicy_;
     QFrame *simpleClavier_;
@@ -31,6 +35,9 @@ private:
     QHBoxLayout *subLayout_1_;
     QHBoxLayout *subLayout_2_;
     QHBoxLayout *subLayout_3_;
+    QHBoxLayout *subLayout_4_;
+    QGridLayout *variableLayout_;
+    QGridLayout *fonctionLayout_;
 
     void creerButton(const QString &text, const char *member);
     void creerSimpleClavier();
@@ -43,6 +50,8 @@ private:
 
 public:
     QClavier(QCalculateur &calculateur);
+    void setIdentifieurMap(identifieurMap_t *mp) { identifieurMap_ = mp; }
+    void updateUserClavier();
 
 private slots:
     void addTextClicked();

@@ -1,8 +1,5 @@
-#include <QRegExp>
 #include <QStringList>
 #include <iostream>
-#include <cstring>
-#include <deque>
 #include <stack>
 
 #include "controleur.h"
@@ -167,10 +164,6 @@ QStringList Controleur::toLitteraleEtOperateur(const QString &s)
         }
         first = second = std::find_if(second + 1, str.end(), [](char c) { return c != ' '; });
     }
-    // for (auto &s : list)
-    // {
-    //     std::cout << s.toStdString() << '\n';
-    // }
     return list;
 }
 
@@ -197,14 +190,14 @@ Litterale *Controleur::creerLitterale(QString str, TypeLitterale type)
 
 void Controleur::commande(const QString &s)
 {
-    std::unique_ptr<Pile> pileCopy{litteraleAffiche_->cloneOnHeapGeneral()};
+    Pile* pileCopy{litteraleAffiche_->cloneOnHeapGeneral()};
     try
     {
         QStringList listOperande = toLitteraleEtOperateur(s);
-        for (auto &l : listOperande)
-        {
-            std::cout << l.toStdString() << '\n';
-        }
+        // for (auto &l : listOperande)
+        // {
+        //     std::cout << l.toStdString() << '\n';
+        // }
         for (size_t i = 0; i < listOperande.size(); i++)
         {
             QString operande = listOperande[i];
@@ -260,15 +253,13 @@ void Controleur::commande(const QString &s)
                     throw CalculateurException(("Opérande invalide: " + operande.toStdString() + " !").c_str());
                 }
             }
-            for (auto &i : identifieurMap_)
-            {
-                std::cout << i.first.toStdString() << ' ' << i.second->affichage().toStdString() << '\n';
-            }
         }
+        pileHistory_.push_back(*pileCopy);
+        historyIndex_++;
     }
-    catch (const CalculateurException &e)
+    catch (const std::runtime_error &e)
     {
-        litteraleAffiche_ = std::move(pileCopy);
+        litteraleAffiche_.reset(pileCopy);
         throw;
     }
 }

@@ -1,4 +1,5 @@
 #include <cmath>
+
 #include "qclavier.h"
 
 QClavier::QClavier(QCalculateur &calculateur)
@@ -10,12 +11,14 @@ QClavier::QClavier(QCalculateur &calculateur)
     subLayout_1_ = new QHBoxLayout{};
     subLayout_2_ = new QHBoxLayout{};
     subLayout_3_ = new QHBoxLayout{};
+    subLayout_4_ = new QHBoxLayout{};
 
     sizeButtonPolicy_.setHorizontalStretch(0);
     sizeButtonPolicy_.setVerticalStretch(0);
     sizeButtonPolicy_.setHeightForWidth((new QPushButton())->sizePolicy().hasHeightForWidth());
 
     setLayout(mainLayout_);
+    mainLayout_->addLayout(subLayout_4_);
     mainLayout_->addLayout(subLayout_3_);
     mainLayout_->addLayout(subLayout_2_);
     mainLayout_->addLayout(subLayout_1_);
@@ -25,6 +28,7 @@ QClavier::QClavier(QCalculateur &calculateur)
     creerEvaluationClavier();
     creerCondtionClavier();
     creerLogiqueClavier();
+    creerUserClavier();
 }
 
 void QClavier::creerSimpleClavier()
@@ -204,6 +208,56 @@ void QClavier::creerCondtionClavier()
 
 void QClavier::creerUserClavier()
 {
+    variableLayout_ = new QGridLayout{};
+    userVariableClavier_ = new QFrame{this};
+    userVariableClavier_->setLayout(variableLayout_);
+    userVariableClavier_->setFrameStyle(QFrame::Box | QFrame::Sunken);
+    userVariableClavier_->setMidLineWidth(0);
+    subLayout_4_->addWidget(userVariableClavier_);
+
+    fonctionLayout_ = new QGridLayout{};
+    fonctionClavier_ = new QFrame{this};
+    fonctionClavier_->setLayout(fonctionLayout_);
+    fonctionClavier_->setFrameStyle(QFrame::Box | QFrame::Sunken);
+    fonctionClavier_->setMidLineWidth(0);
+    subLayout_4_->addWidget(fonctionClavier_);
+}
+
+void QClavier::updateUserClavier()
+{
+    unsigned int maxColonne = 4;
+    QLayoutItem *item;
+    while ((item = variableLayout_->takeAt(0)) != nullptr)
+    {
+        delete item->widget();
+        delete item;
+    }
+    while ((item = fonctionLayout_->takeAt(0)) != nullptr)
+    {
+        delete item->widget();
+        delete item;
+    }
+    int currentVarible = 0, currentFonction = 0;
+    for (auto itr = identifieurMap_->begin(); itr != identifieurMap_->end(); itr++)
+    {
+        QString buttonText = itr->second->affichage().mid(1, itr->second->affichage().length() - 2);
+        QPushButton *button = new QPushButton(buttonText);
+        connect(button, SIGNAL(clicked()), this, SLOT(addTextClicked()));
+        if (itr->second->getLitterale()->getType() == TypeLitterale::PROGRAMME)
+        {
+            int range = currentFonction / maxColonne;
+            int colonne = currentFonction % maxColonne;
+            fonctionLayout_->addWidget(button, range, colonne);
+            currentFonction++;
+        }
+        else
+        {
+            int range = currentVarible / maxColonne;
+            int colonne = currentVarible % maxColonne;
+            variableLayout_->addWidget(button, range, colonne);
+            currentVarible++;
+        }
+    }
 }
 
 void QClavier::creerButton(const QString &text, const char *member)

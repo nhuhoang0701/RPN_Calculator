@@ -38,10 +38,18 @@ public:
 
     void setLitterale(Litterale *valeur)
     {
-        delete valeur_;
         valeur_ = valeur;
     }
-    Litterale *getLitterale() { return valeur_; }
+    Litterale *getLitterale()
+    {
+        if (valeur_ == nullptr)
+        {
+            throw CalculateurException{("Impossible de traiter une littérale expression pointée à nul: " +
+                                        identifieur_.toStdString())
+                                           .c_str()};
+        }
+        return valeur_;
+    }
 
     void setIdentifieur(const QString &identifieur) { identifieur_ = identifieur; }
     const QString &getIdentifieur() { return identifieur_; }

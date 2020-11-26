@@ -41,9 +41,6 @@ int main(int argc, char *argv[])
         //    std::cout << (*itr)->affichage().toStdString() << '\n';
     }
 
-    Pile *pile = new Pile{};
-    PileIterator itr = PileIterator{pile};
-    pile->push(*(new LitteraleExpression{"Hoang"}));
     // std::cout << op->traitement(std::vector<Litterale *>{r1, r4})->affichage().toStdString() << '\n';
     try
     {

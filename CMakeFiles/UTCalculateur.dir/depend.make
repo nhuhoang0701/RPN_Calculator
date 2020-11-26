@@ -14,9 +14,6 @@ CMakeFiles/UTCalculateur.dir/UTCalculateur_autogen/mocs_compilation.cpp.o: inclu
 CMakeFiles/UTCalculateur.dir/UTCalculateur_autogen/mocs_compilation.cpp.o: include/pile.h
 CMakeFiles/UTCalculateur.dir/UTCalculateur_autogen/mocs_compilation.cpp.o: include/qcalculateur.h
 CMakeFiles/UTCalculateur.dir/UTCalculateur_autogen/mocs_compilation.cpp.o: include/qclavier.h
-CMakeFiles/UTCalculateur.dir/UTCalculateur_autogen/mocs_compilation.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/QList
-CMakeFiles/UTCalculateur.dir/UTCalculateur_autogen/mocs_compilation.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/QObject
-CMakeFiles/UTCalculateur.dir/UTCalculateur_autogen/mocs_compilation.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/QRegExp
 CMakeFiles/UTCalculateur.dir/UTCalculateur_autogen/mocs_compilation.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/QString
 CMakeFiles/UTCalculateur.dir/UTCalculateur_autogen/mocs_compilation.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/QStringList
 CMakeFiles/UTCalculateur.dir/UTCalculateur_autogen/mocs_compilation.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qabstractitemmodel.h
@@ -165,9 +162,6 @@ CMakeFiles/UTCalculateur.dir/UTCalculateur_autogen/mocs_compilation.cpp.o: /home
 CMakeFiles/UTCalculateur.dir/UTCalculateur_autogen/mocs_compilation.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/qwidget.h
 
 CMakeFiles/UTCalculateur.dir/src/controleur.cpp.o: src/controleur.cpp
-CMakeFiles/UTCalculateur.dir/src/controleur.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/QList
-CMakeFiles/UTCalculateur.dir/src/controleur.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/QObject
-CMakeFiles/UTCalculateur.dir/src/controleur.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/QRegExp
 CMakeFiles/UTCalculateur.dir/src/controleur.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/QString
 CMakeFiles/UTCalculateur.dir/src/controleur.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/QStringList
 CMakeFiles/UTCalculateur.dir/src/controleur.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qalgorithms.h
@@ -183,9 +177,7 @@ CMakeFiles/UTCalculateur.dir/src/controleur.cpp.o: /home/hoangkplog/Qt5.14.2/5.1
 CMakeFiles/UTCalculateur.dir/src/controleur.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qcompilerdetection.h
 CMakeFiles/UTCalculateur.dir/src/controleur.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qconfig-bootstrapped.h
 CMakeFiles/UTCalculateur.dir/src/controleur.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qconfig.h
-CMakeFiles/UTCalculateur.dir/src/controleur.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qcontainerfwd.h
 CMakeFiles/UTCalculateur.dir/src/controleur.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qcontainertools_impl.h
-CMakeFiles/UTCalculateur.dir/src/controleur.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qcoreevent.h
 CMakeFiles/UTCalculateur.dir/src/controleur.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qflags.h
 CMakeFiles/UTCalculateur.dir/src/controleur.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qgenericatomic.h
 CMakeFiles/UTCalculateur.dir/src/controleur.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qglobal.h
@@ -194,20 +186,14 @@ CMakeFiles/UTCalculateur.dir/src/controleur.cpp.o: /home/hoangkplog/Qt5.14.2/5.1
 CMakeFiles/UTCalculateur.dir/src/controleur.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qiterator.h
 CMakeFiles/UTCalculateur.dir/src/controleur.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qlist.h
 CMakeFiles/UTCalculateur.dir/src/controleur.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qlogging.h
-CMakeFiles/UTCalculateur.dir/src/controleur.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qmetatype.h
 CMakeFiles/UTCalculateur.dir/src/controleur.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qmutex.h
 CMakeFiles/UTCalculateur.dir/src/controleur.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qnamespace.h
 CMakeFiles/UTCalculateur.dir/src/controleur.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qnumeric.h
-CMakeFiles/UTCalculateur.dir/src/controleur.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qobject.h
-CMakeFiles/UTCalculateur.dir/src/controleur.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qobject_impl.h
-CMakeFiles/UTCalculateur.dir/src/controleur.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qobjectdefs.h
-CMakeFiles/UTCalculateur.dir/src/controleur.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qobjectdefs_impl.h
 CMakeFiles/UTCalculateur.dir/src/controleur.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qpair.h
 CMakeFiles/UTCalculateur.dir/src/controleur.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qpoint.h
 CMakeFiles/UTCalculateur.dir/src/controleur.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qprocessordetection.h
 CMakeFiles/UTCalculateur.dir/src/controleur.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qrefcount.h
 CMakeFiles/UTCalculateur.dir/src/controleur.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qregexp.h
-CMakeFiles/UTCalculateur.dir/src/controleur.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qscopedpointer.h
 CMakeFiles/UTCalculateur.dir/src/controleur.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qstring.h
 CMakeFiles/UTCalculateur.dir/src/controleur.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qstringalgorithms.h
 CMakeFiles/UTCalculateur.dir/src/controleur.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qstringbuilder.h
@@ -219,7 +205,6 @@ CMakeFiles/UTCalculateur.dir/src/controleur.cpp.o: /home/hoangkplog/Qt5.14.2/5.1
 CMakeFiles/UTCalculateur.dir/src/controleur.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qsystemdetection.h
 CMakeFiles/UTCalculateur.dir/src/controleur.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qtcore-config.h
 CMakeFiles/UTCalculateur.dir/src/controleur.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qtypeinfo.h
-CMakeFiles/UTCalculateur.dir/src/controleur.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qvarlengtharray.h
 CMakeFiles/UTCalculateur.dir/src/controleur.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qvector.h
 CMakeFiles/UTCalculateur.dir/src/controleur.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qversiontagging.h
 CMakeFiles/UTCalculateur.dir/src/controleur.cpp.o: include/controleur.h
@@ -352,9 +337,6 @@ CMakeFiles/UTCalculateur.dir/src/litterale_entiere.cpp.o: include/litterale_rati
 CMakeFiles/UTCalculateur.dir/src/litterale_entiere.cpp.o: include/litterale_reelle.h
 
 CMakeFiles/UTCalculateur.dir/src/litterale_programme.cpp.o: src/litterale_programme.cpp
-CMakeFiles/UTCalculateur.dir/src/litterale_programme.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/QList
-CMakeFiles/UTCalculateur.dir/src/litterale_programme.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/QObject
-CMakeFiles/UTCalculateur.dir/src/litterale_programme.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/QRegExp
 CMakeFiles/UTCalculateur.dir/src/litterale_programme.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/QString
 CMakeFiles/UTCalculateur.dir/src/litterale_programme.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/QStringList
 CMakeFiles/UTCalculateur.dir/src/litterale_programme.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qalgorithms.h
@@ -370,9 +352,7 @@ CMakeFiles/UTCalculateur.dir/src/litterale_programme.cpp.o: /home/hoangkplog/Qt5
 CMakeFiles/UTCalculateur.dir/src/litterale_programme.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qcompilerdetection.h
 CMakeFiles/UTCalculateur.dir/src/litterale_programme.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qconfig-bootstrapped.h
 CMakeFiles/UTCalculateur.dir/src/litterale_programme.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qconfig.h
-CMakeFiles/UTCalculateur.dir/src/litterale_programme.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qcontainerfwd.h
 CMakeFiles/UTCalculateur.dir/src/litterale_programme.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qcontainertools_impl.h
-CMakeFiles/UTCalculateur.dir/src/litterale_programme.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qcoreevent.h
 CMakeFiles/UTCalculateur.dir/src/litterale_programme.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qflags.h
 CMakeFiles/UTCalculateur.dir/src/litterale_programme.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qgenericatomic.h
 CMakeFiles/UTCalculateur.dir/src/litterale_programme.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qglobal.h
@@ -381,20 +361,14 @@ CMakeFiles/UTCalculateur.dir/src/litterale_programme.cpp.o: /home/hoangkplog/Qt5
 CMakeFiles/UTCalculateur.dir/src/litterale_programme.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qiterator.h
 CMakeFiles/UTCalculateur.dir/src/litterale_programme.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qlist.h
 CMakeFiles/UTCalculateur.dir/src/litterale_programme.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qlogging.h
-CMakeFiles/UTCalculateur.dir/src/litterale_programme.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qmetatype.h
 CMakeFiles/UTCalculateur.dir/src/litterale_programme.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qmutex.h
 CMakeFiles/UTCalculateur.dir/src/litterale_programme.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qnamespace.h
 CMakeFiles/UTCalculateur.dir/src/litterale_programme.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qnumeric.h
-CMakeFiles/UTCalculateur.dir/src/litterale_programme.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qobject.h
-CMakeFiles/UTCalculateur.dir/src/litterale_programme.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qobject_impl.h
-CMakeFiles/UTCalculateur.dir/src/litterale_programme.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qobjectdefs.h
-CMakeFiles/UTCalculateur.dir/src/litterale_programme.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qobjectdefs_impl.h
 CMakeFiles/UTCalculateur.dir/src/litterale_programme.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qpair.h
 CMakeFiles/UTCalculateur.dir/src/litterale_programme.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qpoint.h
 CMakeFiles/UTCalculateur.dir/src/litterale_programme.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qprocessordetection.h
 CMakeFiles/UTCalculateur.dir/src/litterale_programme.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qrefcount.h
 CMakeFiles/UTCalculateur.dir/src/litterale_programme.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qregexp.h
-CMakeFiles/UTCalculateur.dir/src/litterale_programme.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qscopedpointer.h
 CMakeFiles/UTCalculateur.dir/src/litterale_programme.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qstring.h
 CMakeFiles/UTCalculateur.dir/src/litterale_programme.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qstringalgorithms.h
 CMakeFiles/UTCalculateur.dir/src/litterale_programme.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qstringbuilder.h
@@ -406,7 +380,6 @@ CMakeFiles/UTCalculateur.dir/src/litterale_programme.cpp.o: /home/hoangkplog/Qt5
 CMakeFiles/UTCalculateur.dir/src/litterale_programme.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qsystemdetection.h
 CMakeFiles/UTCalculateur.dir/src/litterale_programme.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qtcore-config.h
 CMakeFiles/UTCalculateur.dir/src/litterale_programme.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qtypeinfo.h
-CMakeFiles/UTCalculateur.dir/src/litterale_programme.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qvarlengtharray.h
 CMakeFiles/UTCalculateur.dir/src/litterale_programme.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qvector.h
 CMakeFiles/UTCalculateur.dir/src/litterale_programme.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qversiontagging.h
 CMakeFiles/UTCalculateur.dir/src/litterale_programme.cpp.o: include/controleur.h
@@ -500,9 +473,6 @@ CMakeFiles/UTCalculateur.dir/src/litterale_reelle.cpp.o: include/litterale_ratio
 CMakeFiles/UTCalculateur.dir/src/litterale_reelle.cpp.o: include/litterale_reelle.h
 
 CMakeFiles/UTCalculateur.dir/src/main.cpp.o: src/main.cpp
-CMakeFiles/UTCalculateur.dir/src/main.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/QList
-CMakeFiles/UTCalculateur.dir/src/main.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/QObject
-CMakeFiles/UTCalculateur.dir/src/main.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/QRegExp
 CMakeFiles/UTCalculateur.dir/src/main.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/QString
 CMakeFiles/UTCalculateur.dir/src/main.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/QStringList
 CMakeFiles/UTCalculateur.dir/src/main.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/QtAlgorithms
@@ -674,9 +644,6 @@ CMakeFiles/UTCalculateur.dir/src/main.cpp.o: include/qcalculateur.h
 CMakeFiles/UTCalculateur.dir/src/main.cpp.o: include/qclavier.h
 
 CMakeFiles/UTCalculateur.dir/src/operateur_accessible.cpp.o: src/operateur_accessible.cpp
-CMakeFiles/UTCalculateur.dir/src/operateur_accessible.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/QList
-CMakeFiles/UTCalculateur.dir/src/operateur_accessible.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/QObject
-CMakeFiles/UTCalculateur.dir/src/operateur_accessible.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/QRegExp
 CMakeFiles/UTCalculateur.dir/src/operateur_accessible.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/QString
 CMakeFiles/UTCalculateur.dir/src/operateur_accessible.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/QStringList
 CMakeFiles/UTCalculateur.dir/src/operateur_accessible.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qalgorithms.h
@@ -692,9 +659,7 @@ CMakeFiles/UTCalculateur.dir/src/operateur_accessible.cpp.o: /home/hoangkplog/Qt
 CMakeFiles/UTCalculateur.dir/src/operateur_accessible.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qcompilerdetection.h
 CMakeFiles/UTCalculateur.dir/src/operateur_accessible.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qconfig-bootstrapped.h
 CMakeFiles/UTCalculateur.dir/src/operateur_accessible.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qconfig.h
-CMakeFiles/UTCalculateur.dir/src/operateur_accessible.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qcontainerfwd.h
 CMakeFiles/UTCalculateur.dir/src/operateur_accessible.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qcontainertools_impl.h
-CMakeFiles/UTCalculateur.dir/src/operateur_accessible.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qcoreevent.h
 CMakeFiles/UTCalculateur.dir/src/operateur_accessible.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qflags.h
 CMakeFiles/UTCalculateur.dir/src/operateur_accessible.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qgenericatomic.h
 CMakeFiles/UTCalculateur.dir/src/operateur_accessible.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qglobal.h
@@ -703,20 +668,14 @@ CMakeFiles/UTCalculateur.dir/src/operateur_accessible.cpp.o: /home/hoangkplog/Qt
 CMakeFiles/UTCalculateur.dir/src/operateur_accessible.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qiterator.h
 CMakeFiles/UTCalculateur.dir/src/operateur_accessible.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qlist.h
 CMakeFiles/UTCalculateur.dir/src/operateur_accessible.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qlogging.h
-CMakeFiles/UTCalculateur.dir/src/operateur_accessible.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qmetatype.h
 CMakeFiles/UTCalculateur.dir/src/operateur_accessible.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qmutex.h
 CMakeFiles/UTCalculateur.dir/src/operateur_accessible.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qnamespace.h
 CMakeFiles/UTCalculateur.dir/src/operateur_accessible.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qnumeric.h
-CMakeFiles/UTCalculateur.dir/src/operateur_accessible.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qobject.h
-CMakeFiles/UTCalculateur.dir/src/operateur_accessible.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qobject_impl.h
-CMakeFiles/UTCalculateur.dir/src/operateur_accessible.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qobjectdefs.h
-CMakeFiles/UTCalculateur.dir/src/operateur_accessible.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qobjectdefs_impl.h
 CMakeFiles/UTCalculateur.dir/src/operateur_accessible.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qpair.h
 CMakeFiles/UTCalculateur.dir/src/operateur_accessible.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qpoint.h
 CMakeFiles/UTCalculateur.dir/src/operateur_accessible.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qprocessordetection.h
 CMakeFiles/UTCalculateur.dir/src/operateur_accessible.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qrefcount.h
 CMakeFiles/UTCalculateur.dir/src/operateur_accessible.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qregexp.h
-CMakeFiles/UTCalculateur.dir/src/operateur_accessible.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qscopedpointer.h
 CMakeFiles/UTCalculateur.dir/src/operateur_accessible.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qstring.h
 CMakeFiles/UTCalculateur.dir/src/operateur_accessible.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qstringalgorithms.h
 CMakeFiles/UTCalculateur.dir/src/operateur_accessible.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qstringbuilder.h
@@ -728,7 +687,6 @@ CMakeFiles/UTCalculateur.dir/src/operateur_accessible.cpp.o: /home/hoangkplog/Qt
 CMakeFiles/UTCalculateur.dir/src/operateur_accessible.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qsystemdetection.h
 CMakeFiles/UTCalculateur.dir/src/operateur_accessible.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qtcore-config.h
 CMakeFiles/UTCalculateur.dir/src/operateur_accessible.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qtypeinfo.h
-CMakeFiles/UTCalculateur.dir/src/operateur_accessible.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qvarlengtharray.h
 CMakeFiles/UTCalculateur.dir/src/operateur_accessible.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qvector.h
 CMakeFiles/UTCalculateur.dir/src/operateur_accessible.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qversiontagging.h
 CMakeFiles/UTCalculateur.dir/src/operateur_accessible.cpp.o: include/controleur.h
@@ -783,9 +741,6 @@ CMakeFiles/UTCalculateur.dir/src/operateur_binaire.cpp.o: include/operateur_bina
 CMakeFiles/UTCalculateur.dir/src/operateur_binaire.cpp.o: include/operateur_numerique.h
 
 CMakeFiles/UTCalculateur.dir/src/operateur_evaluatif.cpp.o: src/operateur_evaluatif.cpp
-CMakeFiles/UTCalculateur.dir/src/operateur_evaluatif.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/QList
-CMakeFiles/UTCalculateur.dir/src/operateur_evaluatif.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/QObject
-CMakeFiles/UTCalculateur.dir/src/operateur_evaluatif.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/QRegExp
 CMakeFiles/UTCalculateur.dir/src/operateur_evaluatif.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/QString
 CMakeFiles/UTCalculateur.dir/src/operateur_evaluatif.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/QStringList
 CMakeFiles/UTCalculateur.dir/src/operateur_evaluatif.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qalgorithms.h
@@ -801,9 +756,7 @@ CMakeFiles/UTCalculateur.dir/src/operateur_evaluatif.cpp.o: /home/hoangkplog/Qt5
 CMakeFiles/UTCalculateur.dir/src/operateur_evaluatif.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qcompilerdetection.h
 CMakeFiles/UTCalculateur.dir/src/operateur_evaluatif.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qconfig-bootstrapped.h
 CMakeFiles/UTCalculateur.dir/src/operateur_evaluatif.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qconfig.h
-CMakeFiles/UTCalculateur.dir/src/operateur_evaluatif.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qcontainerfwd.h
 CMakeFiles/UTCalculateur.dir/src/operateur_evaluatif.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qcontainertools_impl.h
-CMakeFiles/UTCalculateur.dir/src/operateur_evaluatif.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qcoreevent.h
 CMakeFiles/UTCalculateur.dir/src/operateur_evaluatif.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qflags.h
 CMakeFiles/UTCalculateur.dir/src/operateur_evaluatif.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qgenericatomic.h
 CMakeFiles/UTCalculateur.dir/src/operateur_evaluatif.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qglobal.h
@@ -812,20 +765,14 @@ CMakeFiles/UTCalculateur.dir/src/operateur_evaluatif.cpp.o: /home/hoangkplog/Qt5
 CMakeFiles/UTCalculateur.dir/src/operateur_evaluatif.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qiterator.h
 CMakeFiles/UTCalculateur.dir/src/operateur_evaluatif.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qlist.h
 CMakeFiles/UTCalculateur.dir/src/operateur_evaluatif.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qlogging.h
-CMakeFiles/UTCalculateur.dir/src/operateur_evaluatif.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qmetatype.h
 CMakeFiles/UTCalculateur.dir/src/operateur_evaluatif.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qmutex.h
 CMakeFiles/UTCalculateur.dir/src/operateur_evaluatif.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qnamespace.h
 CMakeFiles/UTCalculateur.dir/src/operateur_evaluatif.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qnumeric.h
-CMakeFiles/UTCalculateur.dir/src/operateur_evaluatif.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qobject.h
-CMakeFiles/UTCalculateur.dir/src/operateur_evaluatif.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qobject_impl.h
-CMakeFiles/UTCalculateur.dir/src/operateur_evaluatif.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qobjectdefs.h
-CMakeFiles/UTCalculateur.dir/src/operateur_evaluatif.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qobjectdefs_impl.h
 CMakeFiles/UTCalculateur.dir/src/operateur_evaluatif.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qpair.h
 CMakeFiles/UTCalculateur.dir/src/operateur_evaluatif.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qpoint.h
 CMakeFiles/UTCalculateur.dir/src/operateur_evaluatif.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qprocessordetection.h
 CMakeFiles/UTCalculateur.dir/src/operateur_evaluatif.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qrefcount.h
 CMakeFiles/UTCalculateur.dir/src/operateur_evaluatif.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qregexp.h
-CMakeFiles/UTCalculateur.dir/src/operateur_evaluatif.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qscopedpointer.h
 CMakeFiles/UTCalculateur.dir/src/operateur_evaluatif.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qstring.h
 CMakeFiles/UTCalculateur.dir/src/operateur_evaluatif.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qstringalgorithms.h
 CMakeFiles/UTCalculateur.dir/src/operateur_evaluatif.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qstringbuilder.h
@@ -837,7 +784,6 @@ CMakeFiles/UTCalculateur.dir/src/operateur_evaluatif.cpp.o: /home/hoangkplog/Qt5
 CMakeFiles/UTCalculateur.dir/src/operateur_evaluatif.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qsystemdetection.h
 CMakeFiles/UTCalculateur.dir/src/operateur_evaluatif.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qtcore-config.h
 CMakeFiles/UTCalculateur.dir/src/operateur_evaluatif.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qtypeinfo.h
-CMakeFiles/UTCalculateur.dir/src/operateur_evaluatif.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qvarlengtharray.h
 CMakeFiles/UTCalculateur.dir/src/operateur_evaluatif.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qvector.h
 CMakeFiles/UTCalculateur.dir/src/operateur_evaluatif.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qversiontagging.h
 CMakeFiles/UTCalculateur.dir/src/operateur_evaluatif.cpp.o: include/controleur.h
@@ -968,9 +914,6 @@ CMakeFiles/UTCalculateur.dir/src/pile.cpp.o: include/litterale.h
 CMakeFiles/UTCalculateur.dir/src/pile.cpp.o: include/pile.h
 
 CMakeFiles/UTCalculateur.dir/src/qcalculateur.cpp.o: src/qcalculateur.cpp
-CMakeFiles/UTCalculateur.dir/src/qcalculateur.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/QList
-CMakeFiles/UTCalculateur.dir/src/qcalculateur.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/QObject
-CMakeFiles/UTCalculateur.dir/src/qcalculateur.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/QRegExp
 CMakeFiles/UTCalculateur.dir/src/qcalculateur.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/QString
 CMakeFiles/UTCalculateur.dir/src/qcalculateur.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/QStringList
 CMakeFiles/UTCalculateur.dir/src/qcalculateur.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qabstractitemmodel.h
@@ -1135,9 +1078,6 @@ CMakeFiles/UTCalculateur.dir/src/qcalculateur.cpp.o: include/qcalculateur.h
 CMakeFiles/UTCalculateur.dir/src/qcalculateur.cpp.o: include/qclavier.h
 
 CMakeFiles/UTCalculateur.dir/src/qclavier.cpp.o: src/qclavier.cpp
-CMakeFiles/UTCalculateur.dir/src/qclavier.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/QList
-CMakeFiles/UTCalculateur.dir/src/qclavier.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/QObject
-CMakeFiles/UTCalculateur.dir/src/qclavier.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/QRegExp
 CMakeFiles/UTCalculateur.dir/src/qclavier.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/QString
 CMakeFiles/UTCalculateur.dir/src/qclavier.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/QStringList
 CMakeFiles/UTCalculateur.dir/src/qclavier.cpp.o: /home/hoangkplog/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qabstractitemmodel.h
