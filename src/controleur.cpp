@@ -1,6 +1,7 @@
 #include <QStringList>
 #include <iostream>
 #include <stack>
+#include <QRegExp>
 
 #include "controleur.h"
 #include "litterale_entiere.h"
@@ -189,6 +190,13 @@ Litterale *Controleur::creerLitterale(QString str, TypeLitterale type)
     }
     if (type == TypeLitterale::EXPRESSION)
     {
+        QRegExp regex("^[A-Z]([A-Z]|[0-9])*");
+        if (!regex.exactMatch(str.mid(1, str.length() - 2)))
+        {
+            throw CalculateurException(("Littérale expression n'est pas correcte syntaxiquement: " +
+                                        str.toStdString())
+                                           .c_str());
+        }
         return new LitteraleExpression{str};
     }
     if (type == TypeLitterale::PROGRAMME)
@@ -198,7 +206,7 @@ Litterale *Controleur::creerLitterale(QString str, TypeLitterale type)
     return nullptr;
 }
 
-void Controleur::commande(const QString &s)
+void Controleur::traiterCommandBar(const QString &s)
 {
     Pile *pileCopy{litteraleAffiche_->cloneOnHeapGeneral()};
     try

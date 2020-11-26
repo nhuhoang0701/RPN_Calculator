@@ -293,7 +293,7 @@ void QClavier::autoOperatorClicked()
 bool QClavier::calculerAutoOperateur(QString op)
 {
     QLineEdit &commandeBar = calculateur_.getCommandBar();
-    calculateur_.getControleur().commande(commandeBar.text() + " " + op);
+    calculateur_.getControleur().traiterCommandBar(commandeBar.text() + " " + op);
     calculateur_.renderVuePile();
     calculateur_.setMessage("");
     commandeBar.clear();

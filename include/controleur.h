@@ -37,7 +37,7 @@ public:
     Pile &getPile() { return *litteraleAffiche_; }
     identifieurMap_t *getIdentifieurMap() { return &identifieurMap_; }
 
-    void commande(const QString &c);
+    void traiterCommandBar(const QString &c);
     TypeLitterale estLitterale(const QString &s);
     bool estIdentifieur(const QString &s);
     bool estOperateurNumerique(const QString &s);

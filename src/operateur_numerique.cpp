@@ -74,7 +74,6 @@ OperateurNumerique *OperateurNumerique::getOperateurNumerique(const QString &sym
 
     if (operateurMap_.find(symbol) == operateurMap_.end())
     {
-        std::cout << "return null pointer in operateur" << '\n';
         return nullptr;
     }
     return operateurMap_.at(symbol).get();

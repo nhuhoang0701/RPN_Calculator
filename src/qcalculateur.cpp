@@ -89,7 +89,7 @@ QCalculateur::QCalculateur()
 
 bool QCalculateur::calculerAutoOperateur(QString op)
 {
-    controleur_.commande(commandeBar_->text() + " " + op);
+    controleur_.traiterCommandBar(commandeBar_->text() + " " + op);
     renderVuePile();
     message_->clear();
     commandeBar_->clear();
