@@ -2,7 +2,9 @@
 #include <QHeaderView>
 #include <QTableWidgetItem>
 #include <QScrollBar>
+#include <QKeyEvent>
 #include <cmath>
+
 #include "qcalculateur.h"
 #include "exceptions.h"
 
@@ -32,12 +34,20 @@ void verticalResizeTableViewToContents(QTableWidget *tableView)
     tableView->setMinimumHeight(rowTotalHeight);
 }
 
+void QCalculateur::keyPressEvent(QKeyEvent *event)
+{
+    if (event->key() == Qt::Key_Return)
+        emit returnPressed();
+    QMainWindow::keyReleaseEvent(event);
+}
+
 QCalculateur::QCalculateur()
     : waitingForOperand{false}, rowCount_{10}, controleur_{Controleur::getInstance()},
       message_{new QLineEdit{}}, vuePile_{new QTableWidget{}},
       commandeBar_{new QLineEdit{}}, clavier_{std::make_unique<QClavier>(*this)}
 {
     // setFixedSize(700, 400);
+    connect(this, SIGNAL(returnPressed()), this, SLOT(enterClicked()));
     setWindowTitle("UTCalculateur");
     mainWidget_ = new QWidget{};
     mainLayout_ = new QVBoxLayout{};
@@ -77,7 +87,7 @@ QCalculateur::QCalculateur()
 
 bool QCalculateur::calculerAutoOperateur(QString op)
 {
-    QString result = controleur_.commande(commandeBar_->text() + " " + op);
+    controleur_.commande(commandeBar_->text() + " " + op);
     renderVuePile();
     message_->clear();
     commandeBar_->clear();
@@ -86,18 +96,18 @@ bool QCalculateur::calculerAutoOperateur(QString op)
 
 void QCalculateur::renderVuePile()
 {
-    Pile &vuePile = controleur_.getPile();
-    PileIterator pileItr{&vuePile};
+    Pile &pile = controleur_.getPile();
+    PileIterator pileItr{&pile};
     int count = 1;
     for (auto itr = pileItr.begin(); (itr != pileItr.end()) && (count <= rowCount_); itr++)
     {
-        // std::cout << (*itr)->affichage().toStdString() << '\n';
         vuePile_->item(rowCount_ - count, 0)->setText((*itr)->affichage());
         count++;
     }
+
     for (size_t i = count; i <= rowCount_; i++)
     {
-        vuePile_->item(rowCount_ - count, 0)->setText("");
+        vuePile_->item(rowCount_ - i, 0)->setText("");
     }
 }
 

@@ -8,16 +8,17 @@ class LitteraleReelle : public LitteraleNumerique
 {
 private:
     double valeur_;
-    int entier_;
+    long long int entier_;
     double decimal_;
 
     std::pair<int, double> getIntDecimal(double valeur);
 
 public:
-    LitteraleReelle(int entier, double decimal);
+    // LitteraleReelle(long long int entier, double decimal);
     LitteraleReelle(double valeur);
-    LitteraleNumerique *cloneOnHeap() const override;
-    const QString affichage(QString f) const override
+    Litterale *cloneOnHeapGeneral() const override { return cloneOnHeapNombre(); }
+    LitteraleNombre *cloneOnHeapNombre() const override;
+    const QString affichage(QString f = "") const override
     {
         f.append(QString::number(valeur_));
         return f;
@@ -30,6 +31,8 @@ public:
     double getDecimal() const { return decimal_; }
 
     virtual LitteraleNumerique *puissance(LitteraleReelle &l) override;
+    virtual LitteraleNombre *traiterTrigonometrique(const std::function<double(double)> &fonction, QString operateur);
+    virtual LitteraleNombre *traiterUnaireSpeciale(QString operateur) override;
     virtual LitteraleNumerique *convertToNumerique(TypeLitterale type) override;
     virtual LitteraleNombre *convertToComplexe() override;
 

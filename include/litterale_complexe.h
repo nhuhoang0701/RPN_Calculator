@@ -24,9 +24,11 @@ public:
 
     const QString affichage(QString f) const override;
     LitteraleComplexe *simplifier() override;
-    LitteraleNombre *cloneOnHeap() const override;
+    Litterale *cloneOnHeapGeneral() const override {return cloneOnHeapNombre();}
+    LitteraleNombre *cloneOnHeapNombre() const override;
     LitteraleNombre *puissance(LitteraleReelle &l) override;
-    LitteraleNombre *convertToComplexe() override { return cloneOnHeap(); }
+    virtual LitteraleNombre *traiterUnaireSpeciale(QString operateur) override;
+    LitteraleNombre *convertToComplexe() override { return cloneOnHeapNombre(); }
 
     LitteraleNombre *operator+(LitteraleNombre &l) override;
     LitteraleNombre *operator-(LitteraleNombre &l) override;

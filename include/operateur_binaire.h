@@ -1,30 +1,12 @@
-#include "operateur.h"
+#ifndef __OPERATEUR_BINAIRE_H__
+#define __OPERATEUR_BINAIRE_H__
 
-class OperateurBinaire : public Operateur
+#include "operateur_numerique.h"
+
+class OperateurBinaire : public OperateurNumerique
 {
 public:
-    OperateurBinaire(QString symbol) : Operateur{2, symbol} {}
-    void checkNotProgramme(const std::vector<Litterale *> &arguments)
-    {
-        for (auto &argument : arguments)
-        {
-            if (argument->getType() == TypeLitterale::PROGRAMME)
-            {
-                std::string name = argument->affichage().toStdString();
-                throw CalculateurException(("Programme trouvés dans l'opérateur de nombre et expression: " + name).c_str());
-            }
-        }
-    }
-    void checkNul(const std::vector<Litterale *> &arguments)
-    {
-        for (auto &argument : arguments)
-        {
-            if (argument->evaluer() == nullptr)
-            {
-                throw CalculateurException("Littérale nul est passé, pas de littérale!");
-            }
-        }
-    }
+    OperateurBinaire(QString symbol) : OperateurNumerique{2, symbol} {}
 };
 
 /*
@@ -176,3 +158,5 @@ public:
     Or();
     LitteraleNombre *traitement(std::vector<Litterale *> &arguments) override;
 };
+
+#endif // __OPERATEUR_BINAIRE_H__

@@ -2,11 +2,6 @@
 #define __OPERATEUR_H__
 
 #include <QString>
-#include <vector>
-#include <string>
-
-#include "litterale.h"
-#include "exceptions.h"
 
 class Operateur
 {
@@ -20,11 +15,6 @@ public:
 
     QString getSymbol() { return symbol_; }
     int getArite() { return arite_; }
-    void checkArite(unsigned int taille);
-
-    virtual LitteraleNombre *traitement(std::vector<Litterale *> &arguments) = 0;
-
-    static Operateur* getOperateur(const QString& symbol);
 };
 
 #endif // __OPERATEUR_H__

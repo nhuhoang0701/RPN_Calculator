@@ -6,29 +6,32 @@
 class LitteraleRationnelle : public LitteraleNumerique
 {
 private:
-    int num_;
-    int den_;
+    long long int num_;
+    long long int den_;
 
 public:
-    LitteraleRationnelle(int num, int den = 1);
+    LitteraleRationnelle(long long int num, long long int den = 1);
 
-    int getNum() const { return num_; }
-    int getDen() const { return den_; }
+    long long int getNum() const { return num_; }
+    long long int getDen() const { return den_; }
 
-    const QString affichage(QString f) const override;
+    const QString affichage(QString f = "") const override;
     bool isNull() const override { return num_ == 0; }
     bool isPos() const override { return num_ * den_ > 0; }
-    LitteraleNumerique *cloneOnHeap() const override;
+    Litterale *cloneOnHeapGeneral() const override { return cloneOnHeapNombre(); }
+    LitteraleNombre *cloneOnHeapNombre() const override;
     LitteraleNumerique *simplifier() override;
     // double getValeur() const { return double(num_) / den_; }
 
-    virtual LitteraleNumerique* puissance(LitteraleReelle& l) override;
+    virtual LitteraleNumerique *puissance(LitteraleReelle &l) override;
+    virtual LitteraleNombre *traiterTrigonometrique(const std::function<double(double)> &fonction, QString operateur);
+    virtual LitteraleNombre *traiterUnaireSpeciale(QString operateur) override;
     virtual LitteraleNumerique *convertToNumerique(TypeLitterale type) override;
     virtual LitteraleNombre *convertToComplexe() override;
 
     LitteraleNombre *operator+(LitteraleNombre &l) override;
     LitteraleNombre *operator-(LitteraleNombre &l) override;
-    LitteraleNombre *operator*(LitteraleNombre &l)override;
+    LitteraleNombre *operator*(LitteraleNombre &l) override;
     LitteraleNombre *operator/(LitteraleNombre &l) override;
 };
 #endif // __LITTERALE_RATIONNELLE_H__

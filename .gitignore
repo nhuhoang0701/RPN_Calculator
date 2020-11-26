@@ -28,6 +28,7 @@ ui_*.h
 *.jsc
 Makefile*
 build/
+UTCalculateur_autogen/
 
 # Qt unit tests
 target_wrapper.*
@@ -41,12 +42,13 @@ target_wrapper.*
 
 # QtCreator CMake
 CMakeLists.txt.user*
+CMakeCache.txt
 
 # Prerequisites
 *.d
 
 #vscode
-.vscode
+.vscode/
 
 # Compiled Object files
 *.slo

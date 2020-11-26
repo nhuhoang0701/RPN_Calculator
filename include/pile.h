@@ -23,11 +23,13 @@ public:
     Pile(Pile &pile) = default;
     Pile() = default;
     Pile(Pile &&pile) = default;
+    Pile &operator=(Pile &pile) = default;
     Pile &operator=(Pile &&pile) = default;
     ~Pile();
 
-    Pile *cloneOnHeap();
+    Pile *cloneOnHeapGeneral();
     bool estVide() const { return litteralePile_.size() == 0; }
+    void clearPile();
     unsigned int getTaille() const { return litteralePile_.size(); }
     static void setNombreItemsAffiche(unsigned int nombreAffiche) { nombreAffiche_ = nombreAffiche; }
     static unsigned int getNombreItemsAffiche() { return nombreAffiche_; }

@@ -1,46 +1,21 @@
+#ifndef __OPERATEUR_UNAIRE_H__
+#define __OPERATEUR_UNAIRE_H__
+
 #include <QString>
 
-#include "operateur.h"
+#include "operateur_numerique.h"
 
-class OperateurUnaire : public Operateur
+class OperateurUnaire : public OperateurNumerique
 {
 private:
 public:
     OperateurUnaire(const QString &symbol);
-    void checkPrequisite(std::vector<Litterale *> &arguments)
-    {
-        // Tester le taille du vecteur arguments
-        if (arguments.size() != 1)
-        {
-            std::string message = "Opérande " + getSymbol().toStdString() + " réaquis 1 argument, " +
-                                  std::to_string(arguments.size()) + " passé(s)!";
-            throw CalculateurException(message.c_str());
-        }
-
-        // Tester arguments ne contiennent pas littérale programme
-        for (auto &argument : arguments)
-        {
-            if (argument->getType() == TypeLitterale::PROGRAMME)
-            {
-                std::string name = argument->affichage().toStdString();
-                throw CalculateurException(("Programme trouvés dans l'opérateur de nombre et expression: " + name).c_str());
-            }
-        }
-
-        // Tester arguments ne contiennent pas nullptr
-        for (auto &argument : arguments)
-        {
-            if (argument->evaluer() == nullptr)
-            {
-                throw CalculateurException("Littérale nul est passé, pas de littérale!");
-            }
-        }
-    }
 };
 
 // NOT opérateur
 class Not : public OperateurUnaire
 {
+public:
     Not();
     LitteraleNombre *traitement(std::vector<Litterale *> &arguments) override;
 };
@@ -48,6 +23,7 @@ class Not : public OperateurUnaire
 // NUM opérateur
 class Numerateur : public OperateurUnaire
 {
+public:
     Numerateur();
     LitteraleNombre *traitement(std::vector<Litterale *> &arguments) override;
 };
@@ -55,6 +31,7 @@ class Numerateur : public OperateurUnaire
 // DEN opérateur
 class Denominateur : public OperateurUnaire
 {
+public:
     Denominateur();
     LitteraleNombre *traitement(std::vector<Litterale *> &arguments) override;
 };
@@ -62,6 +39,7 @@ class Denominateur : public OperateurUnaire
 // SQRT opérateur
 class Sqrt : public OperateurUnaire
 {
+public:
     Sqrt();
     LitteraleNombre *traitement(std::vector<Litterale *> &arguments) override;
 };
@@ -69,6 +47,7 @@ class Sqrt : public OperateurUnaire
 // NEG opérateur
 class Negative : public OperateurUnaire
 {
+public:
     Negative();
     LitteraleNombre *traitement(std::vector<Litterale *> &arguments) override;
 };
@@ -76,6 +55,7 @@ class Negative : public OperateurUnaire
 // SIN opérateur
 class Sin : public OperateurUnaire
 {
+public:
     Sin();
     LitteraleNombre *traitement(std::vector<Litterale *> &arguments) override;
 };
@@ -83,6 +63,7 @@ class Sin : public OperateurUnaire
 // COS opérateur
 class Cos : public OperateurUnaire
 {
+public:
     Cos();
     LitteraleNombre *traitement(std::vector<Litterale *> &arguments) override;
 };
@@ -90,6 +71,7 @@ class Cos : public OperateurUnaire
 // TAN opérateur
 class Tan : public OperateurUnaire
 {
+public:
     Tan();
     LitteraleNombre *traitement(std::vector<Litterale *> &arguments) override;
 };
@@ -97,6 +79,7 @@ class Tan : public OperateurUnaire
 // ARCSIN opérateur
 class Arcsin : public OperateurUnaire
 {
+public:
     Arcsin();
     LitteraleNombre *traitement(std::vector<Litterale *> &arguments) override;
 };
@@ -104,6 +87,7 @@ class Arcsin : public OperateurUnaire
 // ARCCOS opérateur
 class Arccos : public OperateurUnaire
 {
+public:
     Arccos();
     LitteraleNombre *traitement(std::vector<Litterale *> &arguments) override;
 };
@@ -111,6 +95,7 @@ class Arccos : public OperateurUnaire
 // ARCTAN opérateur
 class Arctan : public OperateurUnaire
 {
+public:
     Arctan();
     LitteraleNombre *traitement(std::vector<Litterale *> &arguments) override;
 };
@@ -118,6 +103,7 @@ class Arctan : public OperateurUnaire
 // IM opérateur
 class Imagine : public OperateurUnaire
 {
+public:
     Imagine();
     LitteraleNombre *traitement(std::vector<Litterale *> &arguments) override;
 };
@@ -125,6 +111,7 @@ class Imagine : public OperateurUnaire
 // EXP opérateur
 class Exponent : public OperateurUnaire
 {
+public:
     Exponent();
     LitteraleNombre *traitement(std::vector<Litterale *> &arguments) override;
 };
@@ -132,6 +119,9 @@ class Exponent : public OperateurUnaire
 // LN opérateur
 class LogNaturel : public OperateurUnaire
 {
+public:
     LogNaturel();
     LitteraleNombre *traitement(std::vector<Litterale *> &arguments) override;
 };
+
+#endif // __OPERATEUR_UNAIRE_H__

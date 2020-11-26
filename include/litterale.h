@@ -3,6 +3,9 @@
 
 #include <memory>
 #include <QString>
+#include <functional>
+
+#include "exceptions.h"
 
 class LitteraleNombre;
 
@@ -28,7 +31,19 @@ public:
     virtual TypeLitterale getType() const { return typeLitterale_; }
     virtual bool isNull() const = 0;
     virtual LitteraleNombre *evaluer() = 0;
-    virtual LitteraleNombre *cloneOnHeap() const = 0;
+    virtual Litterale *cloneOnHeapGeneral() const = 0;
+    virtual LitteraleNombre *traiterTrigonometrique(const std::function<double(double)> &fonction, QString operateur)
+    {
+        Litterale::traiterUnaireSpeciale(operateur);
+        return nullptr;
+    }
+    virtual LitteraleNombre *traiterUnaireSpeciale(QString operateur)
+    {
+        std::string message = affichage().toStdString() + std::string(" n'a pas l'opérateur ") +
+                              operateur.toStdString();
+        throw CalculateurException(message.c_str());
+        return nullptr;
+    }
 
 protected:
     TypeLitterale typeLitterale_;
@@ -36,6 +51,7 @@ protected:
 
 class LitteraleNumerique;
 class LitteraleReelle;
+
 /*
 ** LitteraleNombre classe
 */
@@ -45,8 +61,9 @@ public:
     virtual bool isPos() const = 0;
     virtual LitteraleNombre *evaluer() override { return this; }
     virtual LitteraleNombre *simplifier() = 0;
-    virtual LitteraleNombre *puissance(LitteraleReelle& l) = 0;
+    virtual LitteraleNombre *puissance(LitteraleReelle &l) = 0;
     virtual LitteraleNombre *convertToComplexe() = 0;
+    virtual LitteraleNombre *cloneOnHeapNombre() const = 0;
 
     virtual LitteraleNombre *operator+(LitteraleNombre &l) = 0;
     virtual LitteraleNombre *operator-(LitteraleNombre &l) = 0;
@@ -54,7 +71,6 @@ public:
     virtual LitteraleNombre *operator/(LitteraleNombre &l) = 0;
 };
 
-#include "litterale_complexe.h"
 /*
 ** LitteraleNumerique classe compose LitteraleEntiere, LitteraleRationnelle, LitteraleReelle
 */
@@ -64,7 +80,6 @@ class LitteraleNumerique : public LitteraleNombre
     static LitteraleNumerique *b;
 
 public:
-    // typedef LitteraleNumerique* (*fonc_t)(LitteraleNumerique&, LitteraleNumerique&);
     virtual LitteraleNombre *operator+(LitteraleNombre &l)
     {
         if (l.getType() != TypeLitterale::COMPLEXE)
@@ -126,11 +141,9 @@ public:
         b = l.convertToNumerique(typeMax);
     }
 
-    virtual LitteraleNumerique *cloneOnHeap() const = 0;
+    virtual Litterale *cloneOnHeapGeneral() const = 0;
     virtual LitteraleNumerique *convertToNumerique(TypeLitterale type) = 0;
-    // virtual double getValeur() const = 0;
     virtual LitteraleNumerique *simplifier() = 0;
-    // virtual LitteraleNombre *convertToComplexe():
 };
 
 #endif // __LITTERALE_H__

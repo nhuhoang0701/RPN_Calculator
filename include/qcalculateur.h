@@ -28,16 +28,16 @@ private:
     unsigned int rowCount_;
     QString currentText_;
 
-    QWidget* mainWidget_;
-    QVBoxLayout* mainLayout_;
-    QLineEdit* message_;
-    QTableWidget* vuePile_;
-    QLineEdit* commandeBar_;
+    QWidget *mainWidget_;
+    QVBoxLayout *mainLayout_;
+    QLineEdit *message_;
+    QTableWidget *vuePile_;
+    QLineEdit *commandeBar_;
 
     std::map<QString, QPushButton *> keyboardMap_;
-    QWidget* keyboard_;
+    QWidget *keyboard_;
     std::unique_ptr<QClavier> clavier_;
-    QGridLayout* keyboardLayout_;
+    QGridLayout *keyboardLayout_;
 
     std::unique_ptr<std::queue<double>> operandQueue_;
 
@@ -53,8 +53,14 @@ public:
     bool calculerAutoOperateur(QString op = "");
     void renderVuePile();
 
+signals:
+    void returnPressed() const;
+
 private slots:
     void enterClicked();
+
+protected:
+    void keyPressEvent(QKeyEvent *event);
 };
 
 #endif // __QCALCULATEUR_H__

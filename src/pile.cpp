@@ -4,21 +4,27 @@ unsigned int Pile::nombreAffiche_ = 10;
 
 Pile::~Pile()
 {
+    clearPile();
+}
+
+Pile *Pile::cloneOnHeapGeneral()
+{
+    Pile *pileCopy = new Pile{};
+    for (auto itr = litteralePile_.begin(); itr != litteralePile_.end(); itr++)
+    {
+        pileCopy->litteralePile_.push_back((*itr)->cloneOnHeapGeneral());
+    }
+    return pileCopy;
+}
+
+void Pile::clearPile()
+{
     for (auto &p : litteralePile_)
     {
         delete p;
     }
     litteralePile_.clear();
-}
-
-Pile *Pile::cloneOnHeap()
-{
-    Pile* pileCopy = new Pile{};
-    for (auto itr = litteralePile_.begin(); itr != litteralePile_.end(); itr++)
-    {
-        pileCopy->litteralePile_.push_back((*itr)->cloneOnHeap());
-    }
-    return pileCopy;
+    affichage();
 }
 
 Litterale &Pile::top() const

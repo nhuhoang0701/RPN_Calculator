@@ -11,16 +11,19 @@
 
 #include "exceptions.h"
 #include "litterale.h"
-#include "operateur.h"
+#include "litterale_expression.h"
+#include "operateur_numerique.h"
+#include "operateur_accessible.h"
 #include "pile.h"
 
+using identifieurMap_t = std::map<QString, LitteraleExpression *>;
 class Controleur
 {
     std::unique_ptr<Pile> litteraleAffiche_;
     // operateurManager &opeMng;
     // CareTaker careTaker;
     unsigned int history_index;
-    std::map<QString, Operateur *> mapAtome;
+    identifieurMap_t identifieurMap_;
 
     Controleur() : litteraleAffiche_{std::make_unique<Pile>()} {}
     // Controleur(operateurManager &o, Pile &v) : littAff(v), history_index(0)
@@ -29,7 +32,7 @@ class Controleur
     // for (operateurManager::iterator it = opeMng.begin(); it != opeMng.end(); ++it)
     // {
     //     if (rx.exactMatch((*it).getSymbol()))
-    //         mapAtome.insert((*it).getSymbol(), &(*it));
+    //         identifieurMap_.insert((*it).getSymbol(), &(*it));
     // }
     // save();
     // }
@@ -40,11 +43,13 @@ public:
 
     Pile &getPile() { return *litteraleAffiche_; }
 
-    QString commande(const QString &c);
-    bool estOperateur(const QString &s);
+    void commande(const QString &c);
+    bool estOperateurNumerique(const QString &s);
+    bool estOperateurAccessible(const QString& s);
+    bool checkOperateurPile(const QString &s);
     TypeLitterale estLitterale(const QString &s);
-    bool estLitteraleAtome(const QString &s);
-    // QList<Operateur *> FactoryMethod(QString str);
+    bool estIdentifieur(const QString &s);
+    QStringList toLitteraleEtOperateur(const QString &s);
     Litterale *creerLitterale(QString str, TypeLitterale type);
 
     // Memento &saveEtatToMemento(Pile &p) { return *(new Memento(p)); }

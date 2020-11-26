@@ -4,6 +4,7 @@
 #include <memory>
 #include <stdexcept>
 #include <string>
+#include <iostream>
 
 class CalculateurException : public std::runtime_error
 {
@@ -13,6 +14,7 @@ public:
 
     char const *what() const noexcept
     {
+        std::cout << '\a' << '\n';
         return std::runtime_error::what();
     }
 };
