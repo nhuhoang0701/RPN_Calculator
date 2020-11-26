@@ -12,17 +12,24 @@
 #include "operateur_numerique.h"
 #include "operateur_accessible.h"
 #include "pile.h"
+#include "memento_pile.h"
 
 using identifieurMap_t = std::map<QString, LitteraleExpression *>;
+
 class Controleur
 {
-    std::unique_ptr<Pile> litteraleAffiche_;
+    Pile *litteraleAffiche_;
     identifieurMap_t identifieurMap_;
-    unsigned int historyIndex_;
-    std::vector<Pile> pileHistory_;
-    bool redoable_;
 
-    Controleur() : litteraleAffiche_{std::make_unique<Pile>()}, historyIndex_{0}, redoable_{false} {}
+    std::unique_ptr<CareTakerPile> careTakerPile_;
+    unsigned int historyIndex_;
+
+    Controleur() : litteraleAffiche_{new Pile{}}, historyIndex_{0},
+                   careTakerPile_{std::make_unique<CareTakerPile>()}
+    {
+        MementoPile *memento = new MementoPile{*litteraleAffiche_};
+        careTakerPile_->addMementoPile(*memento, historyIndex_);
+    }
 
 public:
     static Controleur &getInstance();
@@ -31,19 +38,17 @@ public:
     identifieurMap_t *getIdentifieurMap() { return &identifieurMap_; }
 
     void commande(const QString &c);
+    TypeLitterale estLitterale(const QString &s);
+    bool estIdentifieur(const QString &s);
     bool estOperateurNumerique(const QString &s);
     bool estOperateurAccessible(const QString &s);
     bool checkOperateurPile(const QString &s);
-    TypeLitterale estLitterale(const QString &s);
-    bool estIdentifieur(const QString &s);
+
     QStringList toLitteraleEtOperateur(const QString &s);
     Litterale *creerLitterale(QString str, TypeLitterale type);
 
-    // Memento &saveEtatToMemento(Pile &p) { return *(new Memento(p)); }
-    void save();
     void loadPrecedent();
     void loadSuivant();
-    void reload();
 };
 
 #endif // __CONTROLEUR__H__

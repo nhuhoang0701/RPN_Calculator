@@ -118,6 +118,14 @@ void QCalculateur::enterClicked()
 {
     try
     {
+        if (isWindowModified())
+        {
+            setWindowTitle("UTCalculateur[*]");
+            setWindowModified(false);
+            return;
+        }
+        setWindowTitle("UTCalculateur[*]");
+        setWindowModified(true);
         calculerAutoOperateur();
     }
     catch (const CalculateurException &e)

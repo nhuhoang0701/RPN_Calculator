@@ -55,7 +55,8 @@
         "variant": "cpp",
         "deque": "cpp",
         "fstream": "cpp",
-        "sstream": "cpp"
+        "sstream": "cpp",
+        "optional": "cpp"
     },
     "files.exclude": {
         "**/*.slo": true,

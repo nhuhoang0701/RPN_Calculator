@@ -93,8 +93,9 @@ void QClavier::creerPileClavier()
     creerButton(tr("DROP"), SLOT(addTextClicked()));
     creerButton(tr("SWAP"), SLOT(addTextClicked()));
     creerButton(tr("CLEAR"), SLOT(addTextClicked()));
-    creerButton(tr("UNDO"), SLOT(addTextClicked()));
-    creerButton(tr("REDO"), SLOT(addTextClicked()));
+
+    creerButton(tr("UNDO"), SLOT(autoOperatorClicked()));
+    creerButton(tr("REDO"), SLOT(autoOperatorClicked()));
 
     pileLayout->addWidget(keyboardMap_["DUP"], 0, 1);
     pileLayout->addWidget(keyboardMap_["DROP"], 1, 1);

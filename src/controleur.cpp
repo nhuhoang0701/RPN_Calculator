@@ -31,7 +31,7 @@ bool Controleur::estOperateurNumerique(const QString &s)
 
 bool Controleur::estOperateurAccessible(const QString &s)
 {
-    if (OperateurAccessible::getOperateurAccessible(s, litteraleAffiche_.get(), &identifieurMap_) != nullptr)
+    if (OperateurAccessible::getOperateurAccessible(s, litteraleAffiche_, &identifieurMap_) != nullptr)
     {
         return true;
     }
@@ -82,6 +82,16 @@ bool Controleur::checkOperateurPile(const QString &s)
     if (s == "CLEAR")
     {
         litteraleAffiche_->clearPile();
+        return true;
+    }
+    if (s == "UNDO")
+    {
+        loadPrecedent();
+        return true;
+    }
+    if (s == "REDO")
+    {
+        loadSuivant();
         return true;
     }
     return false;
@@ -190,14 +200,10 @@ Litterale *Controleur::creerLitterale(QString str, TypeLitterale type)
 
 void Controleur::commande(const QString &s)
 {
-    Pile* pileCopy{litteraleAffiche_->cloneOnHeapGeneral()};
+    Pile *pileCopy{litteraleAffiche_->cloneOnHeapGeneral()};
     try
     {
         QStringList listOperande = toLitteraleEtOperateur(s);
-        // for (auto &l : listOperande)
-        // {
-        //     std::cout << l.toStdString() << '\n';
-        // }
         for (size_t i = 0; i < listOperande.size(); i++)
         {
             QString operande = listOperande[i];
@@ -223,7 +229,7 @@ void Controleur::commande(const QString &s)
                 }
                 else if (estOperateurAccessible(operande))
                 {
-                    OperateurAccessible *op = OperateurAccessible::getOperateurAccessible(operande, litteraleAffiche_.get(), &identifieurMap_);
+                    OperateurAccessible *op = OperateurAccessible::getOperateurAccessible(operande, litteraleAffiche_, &identifieurMap_);
                     op->traitement();
                 }
                 else if (checkOperateurPile(operande))
@@ -254,28 +260,40 @@ void Controleur::commande(const QString &s)
                 }
             }
         }
-        pileHistory_.push_back(*pileCopy);
-        historyIndex_++;
+
+        // Pas d'exception jeté, sauvegarder le pile dans careTakerPile_
+        if (listOperande.size() != 0 && (listOperande[0] != "UNDO" && listOperande[0] != "REDO"))
+        {
+            while (careTakerPile_->getTailleHistorique() > historyIndex_ + 1)
+            {
+                careTakerPile_->pop();
+            }
+            historyIndex_++;
+            MementoPile *mementoPile = new MementoPile(*litteraleAffiche_->cloneOnHeapGeneral());
+            careTakerPile_->addMementoPile(*mementoPile, historyIndex_);
+        }
     }
     catch (const std::runtime_error &e)
     {
-        litteraleAffiche_.reset(pileCopy);
+        litteraleAffiche_ = pileCopy;
         throw;
     }
 }
 
-void Controleur::save()
-{
-}
-
 void Controleur::loadPrecedent()
 {
+    if (historyIndex_ > 0)
+    {
+        historyIndex_--;
+        litteraleAffiche_ = &careTakerPile_->getMementoPile(historyIndex_).getEtatPile();
+    }
 }
 
 void Controleur::loadSuivant()
 {
-}
-
-void Controleur::reload()
-{
+    if (historyIndex_ < careTakerPile_->getTailleHistorique() - 1)
+    {
+        historyIndex_++;
+        litteraleAffiche_ = &careTakerPile_->getMementoPile(historyIndex_).getEtatPile();
+    }
 }
