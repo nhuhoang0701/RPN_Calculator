@@ -9,6 +9,18 @@
 *.dll
 *.dylib
 
+CMakeLists.txt.user
+CMakeCache.txt
+CMakeFiles
+CMakeScripts
+Testing
+Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+_deps
+
 # Qt-es
 object_script.*.Release
 object_script.*.Debug
@@ -26,9 +38,9 @@ qrc_*.cpp
 ui_*.h
 *.qmlc
 *.jsc
-Makefile*
 build/
 UTCalculateur_autogen/
+CMakeFiles/
 
 # Qt unit tests
 target_wrapper.*
