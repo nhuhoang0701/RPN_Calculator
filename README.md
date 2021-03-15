@@ -7,6 +7,7 @@ Scientific calculator using [reverse polish notation](https://en.wikipedia.org/w
 * Qt5
 * Cmake
 * SQLite
+
 To install qt5, go [here](https://www.qt.io/offline-installers) to download zip file and follow instructions on their page. For C++, Cmake and their dependencies, use following command:
 ```
 sudo apt-get install cmake g++
