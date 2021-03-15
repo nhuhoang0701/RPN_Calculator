@@ -14,7 +14,6 @@ sudo apt-get install cmake g++
 
 # Build the application (Linux)
 ```
-# To start, create CMakeLists.txt file firstly in the working directory, then use the following commands
 mkdir build && cd build && cmake .. && cd ..
 cmake -S . -B build
 cmake --build build
